@@ -1,4 +1,7 @@
 
+var cg = require( 'aureooms-js-cg' ) ;
+var _ch = convexhull2d ;
+
 var one , colinear , pit , ccwc ,
 	heapsort , clocksort , chsort , ch ,
 	frominclusionarray , inclusionarray , hulllist ,
@@ -40,7 +43,7 @@ dataset = function ( name ) {
 
 	var points ;
 
-	points = require( "../../data/" + name + ".js" ) ;
+	points = require( "../data/" + name + ".js" ) ;
 
 	return [
 		name ,
@@ -111,17 +114,17 @@ itertools.exhaust( itertools.starmap(
 [
 	[
 		"chn4" ,
-		frominclusionarray( cg.__chn4__( colinear, pit ) ) ,
+		frominclusionarray( _ch.__chn4__( colinear, pit ) ) ,
 		inclusionarray( true )
 	] ,
 	[
 		"chn3" ,
-		frominclusionarray( cg.__chn3__( cg.sinsign, cg.cossign ) ) ,
+		frominclusionarray( _ch.__chn3__( cg.sinsign, cg.cossign ) ) ,
 		inclusionarray( false )
 	] ,
 	[
 		"chn2" ,
-		frominclusionarray( cg.__chn2__( cg.sinsign, cg.cossign ) ) ,
+		frominclusionarray( _ch.__chn2__( cg.sinsign, cg.cossign ) ) ,
 		inclusionarray( true )
 	] ,
 	[
@@ -132,7 +135,7 @@ itertools.exhaust( itertools.starmap(
 
 			set = set.slice( ) ;
 
-			gsm = cg.__grahamscanmono__( cg.sinsign ) ;
+			gsm = _ch.__grahamscanmono__( cg.sinsign ) ;
 
 			array.sort( lexicographical , set ) ;
 
@@ -159,7 +162,7 @@ itertools.exhaust( itertools.starmap(
 
 			hull.push( set[0] ) ;
 
-			jm = cg.__jarvismarch__( cg.sinsign , cg.cossign ) ;
+			jm = _ch.__jarvismarch__( cg.sinsign , cg.cossign ) ;
 
 			jm( set , hull ) ;
 
@@ -177,7 +180,7 @@ itertools.exhaust( itertools.starmap(
 
 			chsort( set , 0 , set.length ) ;
 
-			gs = cg.__grahamscan__( cg.sinsign ) ;
+			gs = _ch.__grahamscan__( cg.sinsign ) ;
 
 			gs( set , 0 , set.length , hull ) ;
 
@@ -209,7 +212,7 @@ itertools.exhaust( itertools.starmap(
 			array.swap( set , 3 , lefttop ) ;
 
 
-			qh = cg.__quickhull__( cg.sinsign , lexicographical ) ;
+			qh = _ch.__quickhull__( cg.sinsign , lexicographical ) ;
 
 			a = set[0] ;
 			b = set[1] ;

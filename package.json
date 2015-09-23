@@ -1,43 +1,44 @@
 {
-	"name": "aureooms-js-convex-hull-2d",
-	"description": "Convex hull algorithms in R^2 code bricks for JavaScript",
-	"version": "2.0.0",
-	"main": "js/dist/convex-hull-2d.js",
-	"dependencies": {},
-	"devDependencies": {
-		"aureooms-js-array": "^3.1.0",
-		"aureooms-js-compare": "^1.4.4",
-		"aureooms-js-functools": "^2.0.3",
-		"aureooms-js-heapsort": "^8.0.0",
-		"aureooms-js-itertools": "^1.3.0",
-		"aureooms-node-package": "^5.0.2"
-	},
-	"scripts": {
-		"build": "./node_modules/.bin/aureooms-node-package-build",
-		"test": "./node_modules/.bin/aureooms-node-package-test",
-		"doc": "./node_modules/.bin/groc"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/aureooms/js-convex-hull-2d.git"
-	},
-	"keywords": [
-		"bricks",
-		"computational",
-		"convex",
-		"ender",
-		"geometry",
-		"hull",
-		"javascript",
-		"js"
-	],
-	"author": "aureooms",
-	"license": "AGPL-3.0",
-	"bugs": {
-		"url": "https://github.com/aureooms/js-convex-hull-2d/issues"
-	},
-	"homepage": "http://aureooms.github.io/js-convex-hull-2d/",
-	"spm": {
-		"main": "js/dist/convex-hull-2d.js"
-	}
+  "name": "aureooms-js-convex-hull-2d",
+  "description": "Convex hull algorithms in R^2 code bricks for JavaScript",
+  "version": "2.0.0",
+  "main": "js/dist/convex-hull-2d.js",
+  "dependencies": {},
+  "devDependencies": {
+    "aureooms-js-array": "^3.1.0",
+    "aureooms-js-cg": "^1.0.1",
+    "aureooms-js-compare": "^1.4.4",
+    "aureooms-js-functools": "^2.0.3",
+    "aureooms-js-heapsort": "^8.0.0",
+    "aureooms-js-itertools": "^1.3.0",
+    "aureooms-node-package": "^5.0.2"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/aureooms-node-package-build",
+    "test": "./node_modules/.bin/aureooms-node-package-test",
+    "doc": "./node_modules/.bin/groc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aureooms/js-convex-hull-2d.git"
+  },
+  "keywords": [
+    "bricks",
+    "computational",
+    "convex",
+    "ender",
+    "geometry",
+    "hull",
+    "javascript",
+    "js"
+  ],
+  "author": "aureooms",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/aureooms/js-convex-hull-2d/issues"
+  },
+  "homepage": "http://aureooms.github.io/js-convex-hull-2d/",
+  "spm": {
+    "main": "js/dist/convex-hull-2d.js"
+  }
 }
