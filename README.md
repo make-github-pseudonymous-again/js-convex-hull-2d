@@ -1,13 +1,15 @@
 [js-convex-hull-2d](http://aureooms.github.io/js-convex-hull-2d)
 ==
 
-Computational geometry code bricks for JavaScript. Parents are
-[aureooms/js-algo](https://github.com/aureooms/js-algo)
-and
-[aureooms/js-data-structures](https://github.com/aureooms/js-data-structures).
+Convex hull algorithms in two dimensions. Parent is
+[aureooms/js-cg](https://github.com/aureooms/js-cg).
 
 ```js
-vcross( vsub( b , a ) , vsub( c , a ) ) ;
+//                 * - < - * - < - *
+//                /                 \
+// hi[0] = lo[0] *                   * hi[p + 1] = lo[q + 1]
+//                \                 /
+//                 * - > - * - > - *
 ```
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-convex-hull-2d.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-convex-hull-2d/master/LICENSE)
@@ -75,54 +77,32 @@ npm install aureooms-js-convex-hull-2d --save
 ## Require
 ### jspm
 ```js
-let cg = require( "github:aureooms/js-convex-hull-2d" ) ;
+let convexhull2d = require( "github:aureooms/js-convex-hull-2d" ) ;
 // or
-import cg from 'aureooms-js-convex-hull-2d' ;
+import convexhull2d from 'aureooms-js-convex-hull-2d' ;
 ```
 ### duo
 ```js
-let cg = require( "aureooms/js-convex-hull-2d" ) ;
+let convexhull2d = require( "aureooms/js-convex-hull-2d" ) ;
 ```
 
 ### component, ender, spm, npm
 ```js
-let cg = require( "aureooms-js-convex-hull-2d" ) ;
+let convexhull2d = require( "aureooms-js-convex-hull-2d" ) ;
 ```
 
 ### bower
-The script tag exposes the global variable `cg`.
+The script tag exposes the global variable `convexhull2d`.
 ```html
-<script src="bower_components/aureooms-js-convex-hull-2d/js/dist/cg.min.js"></script>
+<script src="bower_components/aureooms-js-convex-hull-2d/js/dist/convex-hull-2d.min.js"></script>
 ```
 Alternatively, you can use any tool mentioned [here](http://bower.io/docs/tools/).
 
 ### jam
 ```js
-require( [ "aureooms-js-convex-hull-2d" ] , function ( cg ) { ... } ) ;
+require( [ "aureooms-js-convex-hull-2d" ] , function ( convexhull2d ) { ... } ) ;
 ```
 
 ## Reference
 
-### Information
-  - http://homepages.ulb.ac.be/~slanger/cg/
-  - http://homepages.ulb.ac.be/~slanger/cg/lenertz/
-  - http://homepages.ulb.ac.be/~slanger/cg/P/PopsAndPopturns/projetGeom.html
-  - http://homepages.ulb.ac.be/~slanger/cg/P/WSPD/index.html
-  - http://homepages.ulb.ac.be/~slanger/cg/Swimmer/one_swimmer.html
-  - http://homepages.ulb.ac.be/~slanger/cg/hsaureooms/def.html
-  - http://fremycompany.com/compugem
-  - http://www-cgrl.cs.mcgill.ca/~godfried/teaching/cg-projects/97/Ian/cutting_ears.html
-  - http://www.cs.tufts.edu/comp/260/lectures.html
-  - http://www.toptal.com/python/computational-geometry-in-python-from-theory-to-implementation
-
-### Code
-  - https://github.com/crm416/point-location
-  - https://github.com/ironwallaby/delaunay
-  - https://github.com/gorhill/Javascript-Voronoi
   - https://github.com/mikolalysenko/convex-hull
-  - https://github.com/mourner/rbush
-  - https://github.com/mikolalysenko/delaunay-triangulate
-  - https://github.com/mikolalysenko/incremental-delaunay
-  - https://github.com/mikolalysenko/box-intersect-benchmark
-
-***( forked from [js-cg](https://github.com/aureooms/js-cg) )***
