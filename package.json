@@ -1,8 +1,8 @@
 {
-	"name": "aureooms-js-cg",
-	"description": "computational geometry code bricks for JavaScript",
+	"name": "aureooms-js-convex-hull-2d",
+	"description": "Convex hull algorithms in R^2 code bricks for JavaScript",
 	"version": "1.0.1",
-	"main": "js/dist/cg.js",
+	"main": "js/dist/convex-hull-2d.js",
 	"dependencies": {},
 	"devDependencies": {
 		"aureooms-js-array": "^3.1.0",
@@ -19,26 +19,25 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/aureooms/js-cg.git"
+		"url": "https://github.com/aureooms/js-convex-hull-2d.git"
 	},
 	"keywords": [
-		"algorithm",
-		"cg",
-		"complexity",
-		"computational geometry",
+		"bricks",
+		"computational",
+		"convex",
 		"ender",
+		"geometry",
+		"hull",
 		"javascript",
-		"js",
-		"kernel",
-		"template"
+		"js"
 	],
 	"author": "aureooms",
 	"license": "AGPL-3.0",
 	"bugs": {
-		"url": "https://github.com/aureooms/js-cg/issues"
+		"url": "https://github.com/aureooms/js-convex-hull-2d/issues"
 	},
-	"homepage": "https://aureooms.github.io/js-cg",
+	"homepage": "http://aureooms.github.io/js-convex-hull-2d/",
 	"spm": {
-		"main": "js/dist/cg.js"
+		"main": "js/dist/convex-hull-2d.js"
 	}
 }

@@ -1,11 +1,11 @@
 {
-	"name": "aureooms-js-cg",
-	"repo": "aureooms/js-cg",
+	"name": "aureooms-js-convex-hull-2d",
+	"repo": "aureooms/js-convex-hull-2d",
 	"scripts": [
-		"js/dist/cg.js"
+		"js/dist/convex-hull-2d.js"
 	],
 	"version": "1.0.1",
-	"description": "computational geometry code bricks for JavaScript",
-	"main": "js/dist/cg.js",
+	"description": "Convex hull algorithms in R^2 code bricks for JavaScript",
+	"main": "js/dist/convex-hull-2d.js",
 	"license": "AGPL-3.0"
 }
