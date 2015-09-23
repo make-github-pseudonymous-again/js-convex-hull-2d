@@ -13,7 +13,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/home/aureooms/dev/js/js-cg/README.md",
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/README.md",
         "projectPath": "README.md",
         "targetPath": "index",
         "pageTitle": "index",
@@ -204,7 +204,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/area/shoelace.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/area/shoelace.js",
                 "projectPath": "js/src/d2/area/shoelace.js",
                 "targetPath": "d2/area/shoelace",
                 "pageTitle": "d2/area/shoelace",
@@ -234,7 +234,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/akltoussaint.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/akltoussaint.js",
                 "projectPath": "js/src/d2/ch/akltoussaint.js",
                 "targetPath": "d2/ch/akltoussaint",
                 "pageTitle": "d2/ch/akltoussaint",
@@ -254,7 +254,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/chan.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chan.js",
                 "projectPath": "js/src/d2/ch/chan.js",
                 "targetPath": "d2/ch/chan",
                 "pageTitle": "d2/ch/chan",
@@ -274,7 +274,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/chdynamic.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chdynamic.js",
                 "projectPath": "js/src/d2/ch/chdynamic.js",
                 "targetPath": "d2/ch/chdynamic",
                 "pageTitle": "d2/ch/chdynamic",
@@ -294,7 +294,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/chincremental.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chincremental.js",
                 "projectPath": "js/src/d2/ch/chincremental.js",
                 "targetPath": "d2/ch/chincremental",
                 "pageTitle": "d2/ch/chincremental",
@@ -314,7 +314,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/chn2.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chn2.js",
                 "projectPath": "js/src/d2/ch/chn2.js",
                 "targetPath": "d2/ch/chn2",
                 "pageTitle": "d2/ch/chn2",
@@ -334,7 +334,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/chn3.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chn3.js",
                 "projectPath": "js/src/d2/ch/chn3.js",
                 "targetPath": "d2/ch/chn3",
                 "pageTitle": "d2/ch/chn3",
@@ -354,7 +354,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/chn4.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chn4.js",
                 "projectPath": "js/src/d2/ch/chn4.js",
                 "targetPath": "d2/ch/chn4",
                 "pageTitle": "d2/ch/chn4",
@@ -374,7 +374,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/chonline.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chonline.js",
                 "projectPath": "js/src/d2/ch/chonline.js",
                 "targetPath": "d2/ch/chonline",
                 "pageTitle": "d2/ch/chonline",
@@ -394,7 +394,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/grahamscan.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/grahamscan.js",
                 "projectPath": "js/src/d2/ch/grahamscan.js",
                 "targetPath": "d2/ch/grahamscan",
                 "pageTitle": "d2/ch/grahamscan",
@@ -414,7 +414,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/grahamscanmono.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/grahamscanmono.js",
                 "projectPath": "js/src/d2/ch/grahamscanmono.js",
                 "targetPath": "d2/ch/grahamscanmono",
                 "pageTitle": "d2/ch/grahamscanmono",
@@ -434,7 +434,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/jarvismarch.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/jarvismarch.js",
                 "projectPath": "js/src/d2/ch/jarvismarch.js",
                 "targetPath": "d2/ch/jarvismarch",
                 "pageTitle": "d2/ch/jarvismarch",
@@ -454,7 +454,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/kirkpatrickseidel.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/kirkpatrickseidel.js",
                 "projectPath": "js/src/d2/ch/kirkpatrickseidel.js",
                 "targetPath": "d2/ch/kirkpatrickseidel",
                 "pageTitle": "d2/ch/kirkpatrickseidel",
@@ -474,7 +474,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/ch/quickhull.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/quickhull.js",
                 "projectPath": "js/src/d2/ch/quickhull.js",
                 "targetPath": "d2/ch/quickhull",
                 "pageTitle": "d2/ch/quickhull",
@@ -504,7 +504,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/bottomleft.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/bottomleft.js",
                 "projectPath": "js/src/d2/clockwise/bottomleft.js",
                 "targetPath": "d2/clockwise/bottomleft",
                 "pageTitle": "d2/clockwise/bottomleft",
@@ -524,7 +524,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/bottomright.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/bottomright.js",
                 "projectPath": "js/src/d2/clockwise/bottomright.js",
                 "targetPath": "d2/clockwise/bottomright",
                 "pageTitle": "d2/clockwise/bottomright",
@@ -544,7 +544,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/clocksort.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/clocksort.js",
                 "projectPath": "js/src/d2/clockwise/clocksort.js",
                 "targetPath": "d2/clockwise/clocksort",
                 "pageTitle": "d2/clockwise/clocksort",
@@ -564,7 +564,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/clockwise.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/clockwise.js",
                 "projectPath": "js/src/d2/clockwise/clockwise.js",
                 "targetPath": "d2/clockwise/clockwise",
                 "pageTitle": "d2/clockwise/clockwise",
@@ -584,7 +584,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/counterclockwise.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/counterclockwise.js",
                 "projectPath": "js/src/d2/clockwise/counterclockwise.js",
                 "targetPath": "d2/clockwise/counterclockwise",
                 "pageTitle": "d2/clockwise/counterclockwise",
@@ -604,7 +604,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/leftbottom.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/leftbottom.js",
                 "projectPath": "js/src/d2/clockwise/leftbottom.js",
                 "targetPath": "d2/clockwise/leftbottom",
                 "pageTitle": "d2/clockwise/leftbottom",
@@ -624,7 +624,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/lefttop.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/lefttop.js",
                 "projectPath": "js/src/d2/clockwise/lefttop.js",
                 "targetPath": "d2/clockwise/lefttop",
                 "pageTitle": "d2/clockwise/lefttop",
@@ -644,7 +644,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/rightbottom.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/rightbottom.js",
                 "projectPath": "js/src/d2/clockwise/rightbottom.js",
                 "targetPath": "d2/clockwise/rightbottom",
                 "pageTitle": "d2/clockwise/rightbottom",
@@ -664,7 +664,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/righttop.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/righttop.js",
                 "projectPath": "js/src/d2/clockwise/righttop.js",
                 "targetPath": "d2/clockwise/righttop",
                 "pageTitle": "d2/clockwise/righttop",
@@ -684,7 +684,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/topleft.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/topleft.js",
                 "projectPath": "js/src/d2/clockwise/topleft.js",
                 "targetPath": "d2/clockwise/topleft",
                 "pageTitle": "d2/clockwise/topleft",
@@ -704,7 +704,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/clockwise/topright.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/topright.js",
                 "projectPath": "js/src/d2/clockwise/topright.js",
                 "targetPath": "d2/clockwise/topright",
                 "pageTitle": "d2/clockwise/topright",
@@ -734,7 +734,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/dcel/DCELFace.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/dcel/DCELFace.js",
                 "projectPath": "js/src/d2/dcel/DCELFace.js",
                 "targetPath": "d2/dcel/DCELFace",
                 "pageTitle": "d2/dcel/DCELFace",
@@ -754,7 +754,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/dcel/DCELHalfEdge.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/dcel/DCELHalfEdge.js",
                 "projectPath": "js/src/d2/dcel/DCELHalfEdge.js",
                 "targetPath": "d2/dcel/DCELHalfEdge",
                 "pageTitle": "d2/dcel/DCELHalfEdge",
@@ -774,7 +774,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/dcel/DCELMesh.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/dcel/DCELMesh.js",
                 "projectPath": "js/src/d2/dcel/DCELMesh.js",
                 "targetPath": "d2/dcel/DCELMesh",
                 "pageTitle": "d2/dcel/DCELMesh",
@@ -794,7 +794,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/dcel/DCELVertex.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/dcel/DCELVertex.js",
                 "projectPath": "js/src/d2/dcel/DCELVertex.js",
                 "targetPath": "d2/dcel/DCELVertex",
                 "pageTitle": "d2/dcel/DCELVertex",
@@ -824,7 +824,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/irrational/cosval.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/irrational/cosval.js",
                 "projectPath": "js/src/d2/irrational/cosval.js",
                 "targetPath": "d2/irrational/cosval",
                 "pageTitle": "d2/irrational/cosval",
@@ -844,7 +844,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/irrational/dist.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/irrational/dist.js",
                 "projectPath": "js/src/d2/irrational/dist.js",
                 "targetPath": "d2/irrational/dist",
                 "pageTitle": "d2/irrational/dist",
@@ -864,7 +864,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/irrational/sinval.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/irrational/sinval.js",
                 "projectPath": "js/src/d2/irrational/sinval.js",
                 "targetPath": "d2/irrational/sinval",
                 "pageTitle": "d2/irrational/sinval",
@@ -894,7 +894,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/monotonicity/monotonic.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/monotonicity/monotonic.js",
                 "projectPath": "js/src/d2/monotonicity/monotonic.js",
                 "targetPath": "d2/monotonicity/monotonic",
                 "pageTitle": "d2/monotonicity/monotonic",
@@ -924,7 +924,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/op/det3.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/det3.js",
                 "projectPath": "js/src/d2/op/det3.js",
                 "targetPath": "d2/op/det3",
                 "pageTitle": "d2/op/det3",
@@ -944,7 +944,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/op/scalar2.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/scalar2.js",
                 "projectPath": "js/src/d2/op/scalar2.js",
                 "targetPath": "d2/op/scalar2",
                 "pageTitle": "d2/op/scalar2",
@@ -964,7 +964,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/op/vadd2.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/vadd2.js",
                 "projectPath": "js/src/d2/op/vadd2.js",
                 "targetPath": "d2/op/vadd2",
                 "pageTitle": "d2/op/vadd2",
@@ -984,7 +984,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/op/vcross2.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/vcross2.js",
                 "projectPath": "js/src/d2/op/vcross2.js",
                 "targetPath": "d2/op/vcross2",
                 "pageTitle": "d2/op/vcross2",
@@ -1004,7 +1004,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/op/vdot2.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/vdot2.js",
                 "projectPath": "js/src/d2/op/vdot2.js",
                 "targetPath": "d2/op/vdot2",
                 "pageTitle": "d2/op/vdot2",
@@ -1024,7 +1024,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/op/vsub2.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/vsub2.js",
                 "projectPath": "js/src/d2/op/vsub2.js",
                 "targetPath": "d2/op/vsub2",
                 "pageTitle": "d2/op/vsub2",
@@ -1054,7 +1054,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/ccw.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/ccw.js",
                 "projectPath": "js/src/d2/pred/ccw.js",
                 "targetPath": "d2/pred/ccw",
                 "pageTitle": "d2/pred/ccw",
@@ -1074,7 +1074,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/ccwc.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/ccwc.js",
                 "projectPath": "js/src/d2/pred/ccwc.js",
                 "targetPath": "d2/pred/ccwc",
                 "pageTitle": "d2/pred/ccwc",
@@ -1094,7 +1094,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/colinear.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/colinear.js",
                 "projectPath": "js/src/d2/pred/colinear.js",
                 "targetPath": "d2/pred/colinear",
                 "pageTitle": "d2/pred/colinear",
@@ -1114,7 +1114,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/convex.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/convex.js",
                 "projectPath": "js/src/d2/pred/convex.js",
                 "targetPath": "d2/pred/convex",
                 "pageTitle": "d2/pred/convex",
@@ -1134,7 +1134,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/cossign.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/cossign.js",
                 "projectPath": "js/src/d2/pred/cossign.js",
                 "targetPath": "d2/pred/cossign",
                 "pageTitle": "d2/pred/cossign",
@@ -1164,7 +1164,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/cw.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/cw.js",
                 "projectPath": "js/src/d2/pred/cw.js",
                 "targetPath": "d2/pred/cw",
                 "pageTitle": "d2/pred/cw",
@@ -1184,7 +1184,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/cwc.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/cwc.js",
                 "projectPath": "js/src/d2/pred/cwc.js",
                 "targetPath": "d2/pred/cwc",
                 "pageTitle": "d2/pred/cwc",
@@ -1204,7 +1204,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/icc.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/icc.js",
                 "projectPath": "js/src/d2/pred/icc.js",
                 "targetPath": "d2/pred/icc",
                 "pageTitle": "d2/pred/icc",
@@ -1224,7 +1224,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/piq.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/piq.js",
                 "projectPath": "js/src/d2/pred/piq.js",
                 "targetPath": "d2/pred/piq",
                 "pageTitle": "d2/pred/piq",
@@ -1244,7 +1244,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/pit.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/pit.js",
                 "projectPath": "js/src/d2/pred/pit.js",
                 "targetPath": "d2/pred/pit",
                 "pageTitle": "d2/pred/pit",
@@ -1264,7 +1264,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/rc.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/rc.js",
                 "projectPath": "js/src/d2/pred/rc.js",
                 "targetPath": "d2/pred/rc",
                 "pageTitle": "d2/pred/rc",
@@ -1294,7 +1294,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "JavaScript"
                 },
-                "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/d2/pred/sinsign.js",
+                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/sinsign.js",
                 "projectPath": "js/src/d2/pred/sinsign.js",
                 "targetPath": "d2/pred/sinsign",
                 "pageTitle": "d2/pred/sinsign",
@@ -1326,7 +1326,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "JavaScript"
             },
-            "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/dn/rayshoot.js",
+            "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/dn/rayshoot.js",
             "projectPath": "js/src/dn/rayshoot.js",
             "targetPath": "dn/rayshoot",
             "pageTitle": "dn/rayshoot",
@@ -1346,7 +1346,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "JavaScript"
             },
-            "sourcePath": "/home/aureooms/dev/js/js-cg/js/src/dn/vdot.js",
+            "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/dn/vdot.js",
             "projectPath": "js/src/dn/vdot.js",
             "targetPath": "dn/vdot",
             "pageTitle": "dn/vdot",
