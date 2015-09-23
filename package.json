@@ -1,7 +1,7 @@
 {
 	"name": "aureooms-js-convex-hull-2d",
 	"description": "Convex hull algorithms in R^2 code bricks for JavaScript",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"main": "js/dist/convex-hull-2d.js",
 	"dependencies": {},
 	"devDependencies": {
