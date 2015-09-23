@@ -154,26 +154,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "title": "Reference",
             "slug": "reference"
           },
-          "depth": 2,
-          "children": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 3,
-                "title": "Information",
-                "slug": "information"
-              },
-              "depth": 3
-            }, {
-              "type": "heading",
-              "data": {
-                "level": 3,
-                "title": "Code",
-                "slug": "code"
-              },
-              "depth": 3
-            }
-          ]
+          "depth": 2
         }
       ]
     }, {
