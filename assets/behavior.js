@@ -177,1185 +177,265 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         }
       ]
     }, {
-      "type": "folder",
+      "type": "file",
       "data": {
-        "path": "d2",
-        "title": "d2"
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/akltoussaint.js",
+        "projectPath": "js/src/akltoussaint.js",
+        "targetPath": "akltoussaint",
+        "pageTitle": "akltoussaint",
+        "title": "akltoussaint"
       },
       "depth": 1,
-      "children": [
-        {
-          "type": "folder",
-          "data": {
-            "path": "d2/area",
-            "title": "area"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/area/shoelace.js",
-                "projectPath": "js/src/d2/area/shoelace.js",
-                "targetPath": "d2/area/shoelace",
-                "pageTitle": "d2/area/shoelace",
-                "title": "shoelace"
-              },
-              "depth": 3,
-              "outline": []
-            }
-          ]
-        }, {
-          "type": "folder",
-          "data": {
-            "path": "d2/ch",
-            "title": "ch"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/akltoussaint.js",
-                "projectPath": "js/src/d2/ch/akltoussaint.js",
-                "targetPath": "d2/ch/akltoussaint",
-                "pageTitle": "d2/ch/akltoussaint",
-                "title": "akltoussaint"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chan.js",
-                "projectPath": "js/src/d2/ch/chan.js",
-                "targetPath": "d2/ch/chan",
-                "pageTitle": "d2/ch/chan",
-                "title": "chan"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chdynamic.js",
-                "projectPath": "js/src/d2/ch/chdynamic.js",
-                "targetPath": "d2/ch/chdynamic",
-                "pageTitle": "d2/ch/chdynamic",
-                "title": "chdynamic"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chincremental.js",
-                "projectPath": "js/src/d2/ch/chincremental.js",
-                "targetPath": "d2/ch/chincremental",
-                "pageTitle": "d2/ch/chincremental",
-                "title": "chincremental"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chn2.js",
-                "projectPath": "js/src/d2/ch/chn2.js",
-                "targetPath": "d2/ch/chn2",
-                "pageTitle": "d2/ch/chn2",
-                "title": "chn2"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chn3.js",
-                "projectPath": "js/src/d2/ch/chn3.js",
-                "targetPath": "d2/ch/chn3",
-                "pageTitle": "d2/ch/chn3",
-                "title": "chn3"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chn4.js",
-                "projectPath": "js/src/d2/ch/chn4.js",
-                "targetPath": "d2/ch/chn4",
-                "pageTitle": "d2/ch/chn4",
-                "title": "chn4"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/chonline.js",
-                "projectPath": "js/src/d2/ch/chonline.js",
-                "targetPath": "d2/ch/chonline",
-                "pageTitle": "d2/ch/chonline",
-                "title": "chonline"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/grahamscan.js",
-                "projectPath": "js/src/d2/ch/grahamscan.js",
-                "targetPath": "d2/ch/grahamscan",
-                "pageTitle": "d2/ch/grahamscan",
-                "title": "grahamscan"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/grahamscanmono.js",
-                "projectPath": "js/src/d2/ch/grahamscanmono.js",
-                "targetPath": "d2/ch/grahamscanmono",
-                "pageTitle": "d2/ch/grahamscanmono",
-                "title": "grahamscanmono"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/jarvismarch.js",
-                "projectPath": "js/src/d2/ch/jarvismarch.js",
-                "targetPath": "d2/ch/jarvismarch",
-                "pageTitle": "d2/ch/jarvismarch",
-                "title": "jarvismarch"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/kirkpatrickseidel.js",
-                "projectPath": "js/src/d2/ch/kirkpatrickseidel.js",
-                "targetPath": "d2/ch/kirkpatrickseidel",
-                "pageTitle": "d2/ch/kirkpatrickseidel",
-                "title": "kirkpatrickseidel"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/ch/quickhull.js",
-                "projectPath": "js/src/d2/ch/quickhull.js",
-                "targetPath": "d2/ch/quickhull",
-                "pageTitle": "d2/ch/quickhull",
-                "title": "quickhull"
-              },
-              "depth": 3,
-              "outline": []
-            }
-          ]
-        }, {
-          "type": "folder",
-          "data": {
-            "path": "d2/clockwise",
-            "title": "clockwise"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/bottomleft.js",
-                "projectPath": "js/src/d2/clockwise/bottomleft.js",
-                "targetPath": "d2/clockwise/bottomleft",
-                "pageTitle": "d2/clockwise/bottomleft",
-                "title": "bottomleft"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/bottomright.js",
-                "projectPath": "js/src/d2/clockwise/bottomright.js",
-                "targetPath": "d2/clockwise/bottomright",
-                "pageTitle": "d2/clockwise/bottomright",
-                "title": "bottomright"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/clocksort.js",
-                "projectPath": "js/src/d2/clockwise/clocksort.js",
-                "targetPath": "d2/clockwise/clocksort",
-                "pageTitle": "d2/clockwise/clocksort",
-                "title": "clocksort"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/clockwise.js",
-                "projectPath": "js/src/d2/clockwise/clockwise.js",
-                "targetPath": "d2/clockwise/clockwise",
-                "pageTitle": "d2/clockwise/clockwise",
-                "title": "clockwise"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/counterclockwise.js",
-                "projectPath": "js/src/d2/clockwise/counterclockwise.js",
-                "targetPath": "d2/clockwise/counterclockwise",
-                "pageTitle": "d2/clockwise/counterclockwise",
-                "title": "counterclockwise"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/leftbottom.js",
-                "projectPath": "js/src/d2/clockwise/leftbottom.js",
-                "targetPath": "d2/clockwise/leftbottom",
-                "pageTitle": "d2/clockwise/leftbottom",
-                "title": "leftbottom"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/lefttop.js",
-                "projectPath": "js/src/d2/clockwise/lefttop.js",
-                "targetPath": "d2/clockwise/lefttop",
-                "pageTitle": "d2/clockwise/lefttop",
-                "title": "lefttop"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/rightbottom.js",
-                "projectPath": "js/src/d2/clockwise/rightbottom.js",
-                "targetPath": "d2/clockwise/rightbottom",
-                "pageTitle": "d2/clockwise/rightbottom",
-                "title": "rightbottom"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/righttop.js",
-                "projectPath": "js/src/d2/clockwise/righttop.js",
-                "targetPath": "d2/clockwise/righttop",
-                "pageTitle": "d2/clockwise/righttop",
-                "title": "righttop"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/topleft.js",
-                "projectPath": "js/src/d2/clockwise/topleft.js",
-                "targetPath": "d2/clockwise/topleft",
-                "pageTitle": "d2/clockwise/topleft",
-                "title": "topleft"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/clockwise/topright.js",
-                "projectPath": "js/src/d2/clockwise/topright.js",
-                "targetPath": "d2/clockwise/topright",
-                "pageTitle": "d2/clockwise/topright",
-                "title": "topright"
-              },
-              "depth": 3,
-              "outline": []
-            }
-          ]
-        }, {
-          "type": "folder",
-          "data": {
-            "path": "d2/dcel",
-            "title": "dcel"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/dcel/DCELFace.js",
-                "projectPath": "js/src/d2/dcel/DCELFace.js",
-                "targetPath": "d2/dcel/DCELFace",
-                "pageTitle": "d2/dcel/DCELFace",
-                "title": "DCELFace"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/dcel/DCELHalfEdge.js",
-                "projectPath": "js/src/d2/dcel/DCELHalfEdge.js",
-                "targetPath": "d2/dcel/DCELHalfEdge",
-                "pageTitle": "d2/dcel/DCELHalfEdge",
-                "title": "DCELHalfEdge"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/dcel/DCELMesh.js",
-                "projectPath": "js/src/d2/dcel/DCELMesh.js",
-                "targetPath": "d2/dcel/DCELMesh",
-                "pageTitle": "d2/dcel/DCELMesh",
-                "title": "DCELMesh"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/dcel/DCELVertex.js",
-                "projectPath": "js/src/d2/dcel/DCELVertex.js",
-                "targetPath": "d2/dcel/DCELVertex",
-                "pageTitle": "d2/dcel/DCELVertex",
-                "title": "DCELVertex"
-              },
-              "depth": 3,
-              "outline": []
-            }
-          ]
-        }, {
-          "type": "folder",
-          "data": {
-            "path": "d2/irrational",
-            "title": "irrational"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/irrational/cosval.js",
-                "projectPath": "js/src/d2/irrational/cosval.js",
-                "targetPath": "d2/irrational/cosval",
-                "pageTitle": "d2/irrational/cosval",
-                "title": "cosval"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/irrational/dist.js",
-                "projectPath": "js/src/d2/irrational/dist.js",
-                "targetPath": "d2/irrational/dist",
-                "pageTitle": "d2/irrational/dist",
-                "title": "dist"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/irrational/sinval.js",
-                "projectPath": "js/src/d2/irrational/sinval.js",
-                "targetPath": "d2/irrational/sinval",
-                "pageTitle": "d2/irrational/sinval",
-                "title": "sinval"
-              },
-              "depth": 3,
-              "outline": []
-            }
-          ]
-        }, {
-          "type": "folder",
-          "data": {
-            "path": "d2/monotonicity",
-            "title": "monotonicity"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/monotonicity/monotonic.js",
-                "projectPath": "js/src/d2/monotonicity/monotonic.js",
-                "targetPath": "d2/monotonicity/monotonic",
-                "pageTitle": "d2/monotonicity/monotonic",
-                "title": "monotonic"
-              },
-              "depth": 3,
-              "outline": []
-            }
-          ]
-        }, {
-          "type": "folder",
-          "data": {
-            "path": "d2/op",
-            "title": "op"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/det3.js",
-                "projectPath": "js/src/d2/op/det3.js",
-                "targetPath": "d2/op/det3",
-                "pageTitle": "d2/op/det3",
-                "title": "det3"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/scalar2.js",
-                "projectPath": "js/src/d2/op/scalar2.js",
-                "targetPath": "d2/op/scalar2",
-                "pageTitle": "d2/op/scalar2",
-                "title": "scalar2"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/vadd2.js",
-                "projectPath": "js/src/d2/op/vadd2.js",
-                "targetPath": "d2/op/vadd2",
-                "pageTitle": "d2/op/vadd2",
-                "title": "vadd2"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/vcross2.js",
-                "projectPath": "js/src/d2/op/vcross2.js",
-                "targetPath": "d2/op/vcross2",
-                "pageTitle": "d2/op/vcross2",
-                "title": "vcross2"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/vdot2.js",
-                "projectPath": "js/src/d2/op/vdot2.js",
-                "targetPath": "d2/op/vdot2",
-                "pageTitle": "d2/op/vdot2",
-                "title": "vdot2"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/op/vsub2.js",
-                "projectPath": "js/src/d2/op/vsub2.js",
-                "targetPath": "d2/op/vsub2",
-                "pageTitle": "d2/op/vsub2",
-                "title": "vsub2"
-              },
-              "depth": 3,
-              "outline": []
-            }
-          ]
-        }, {
-          "type": "folder",
-          "data": {
-            "path": "d2/pred",
-            "title": "pred"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/ccw.js",
-                "projectPath": "js/src/d2/pred/ccw.js",
-                "targetPath": "d2/pred/ccw",
-                "pageTitle": "d2/pred/ccw",
-                "title": "ccw"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/ccwc.js",
-                "projectPath": "js/src/d2/pred/ccwc.js",
-                "targetPath": "d2/pred/ccwc",
-                "pageTitle": "d2/pred/ccwc",
-                "title": "ccwc"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/colinear.js",
-                "projectPath": "js/src/d2/pred/colinear.js",
-                "targetPath": "d2/pred/colinear",
-                "pageTitle": "d2/pred/colinear",
-                "title": "colinear"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/convex.js",
-                "projectPath": "js/src/d2/pred/convex.js",
-                "targetPath": "d2/pred/convex",
-                "pageTitle": "d2/pred/convex",
-                "title": "convex"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/cossign.js",
-                "projectPath": "js/src/d2/pred/cossign.js",
-                "targetPath": "d2/pred/cossign",
-                "pageTitle": "d2/pred/cossign",
-                "title": "cossign"
-              },
-              "depth": 3,
-              "outline": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 1,
-                    "title": "of operations",
-                    "slug": "of-operations"
-                  },
-                  "depth": 1
-                }
-              ]
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/cw.js",
-                "projectPath": "js/src/d2/pred/cw.js",
-                "targetPath": "d2/pred/cw",
-                "pageTitle": "d2/pred/cw",
-                "title": "cw"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/cwc.js",
-                "projectPath": "js/src/d2/pred/cwc.js",
-                "targetPath": "d2/pred/cwc",
-                "pageTitle": "d2/pred/cwc",
-                "title": "cwc"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/icc.js",
-                "projectPath": "js/src/d2/pred/icc.js",
-                "targetPath": "d2/pred/icc",
-                "pageTitle": "d2/pred/icc",
-                "title": "icc"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/piq.js",
-                "projectPath": "js/src/d2/pred/piq.js",
-                "targetPath": "d2/pred/piq",
-                "pageTitle": "d2/pred/piq",
-                "title": "piq"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/pit.js",
-                "projectPath": "js/src/d2/pred/pit.js",
-                "targetPath": "d2/pred/pit",
-                "pageTitle": "d2/pred/pit",
-                "title": "pit"
-              },
-              "depth": 3,
-              "outline": []
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/rc.js",
-                "projectPath": "js/src/d2/pred/rc.js",
-                "targetPath": "d2/pred/rc",
-                "pageTitle": "d2/pred/rc",
-                "title": "rc"
-              },
-              "depth": 3,
-              "outline": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 1,
-                    "title": "Ray casting algorithm.",
-                    "slug": "ray-casting-algorithm"
-                  },
-                  "depth": 1
-                }
-              ]
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".js"],
-                  "pygmentsLexer": "javascript",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "JavaScript"
-                },
-                "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/d2/pred/sinsign.js",
-                "projectPath": "js/src/d2/pred/sinsign.js",
-                "targetPath": "d2/pred/sinsign",
-                "pageTitle": "d2/pred/sinsign",
-                "title": "sinsign"
-              },
-              "depth": 3,
-              "outline": []
-            }
-          ]
-        }
-      ]
+      "outline": []
     }, {
-      "type": "folder",
+      "type": "file",
       "data": {
-        "path": "dn",
-        "title": "dn"
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/chan.js",
+        "projectPath": "js/src/chan.js",
+        "targetPath": "chan",
+        "pageTitle": "chan",
+        "title": "chan"
       },
       "depth": 1,
-      "children": [
-        {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [".js"],
-              "pygmentsLexer": "javascript",
-              "multiLineComment": ["/*", "*", "*/"],
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "JavaScript"
-            },
-            "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/dn/rayshoot.js",
-            "projectPath": "js/src/dn/rayshoot.js",
-            "targetPath": "dn/rayshoot",
-            "pageTitle": "dn/rayshoot",
-            "title": "rayshoot"
-          },
-          "depth": 2,
-          "outline": []
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [".js"],
-              "pygmentsLexer": "javascript",
-              "multiLineComment": ["/*", "*", "*/"],
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "JavaScript"
-            },
-            "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/dn/vdot.js",
-            "projectPath": "js/src/dn/vdot.js",
-            "targetPath": "dn/vdot",
-            "pageTitle": "dn/vdot",
-            "title": "vdot"
-          },
-          "depth": 2,
-          "outline": []
-        }
-      ]
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/chdynamic.js",
+        "projectPath": "js/src/chdynamic.js",
+        "targetPath": "chdynamic",
+        "pageTitle": "chdynamic",
+        "title": "chdynamic"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/chincremental.js",
+        "projectPath": "js/src/chincremental.js",
+        "targetPath": "chincremental",
+        "pageTitle": "chincremental",
+        "title": "chincremental"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/chn2.js",
+        "projectPath": "js/src/chn2.js",
+        "targetPath": "chn2",
+        "pageTitle": "chn2",
+        "title": "chn2"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/chn3.js",
+        "projectPath": "js/src/chn3.js",
+        "targetPath": "chn3",
+        "pageTitle": "chn3",
+        "title": "chn3"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/chn4.js",
+        "projectPath": "js/src/chn4.js",
+        "targetPath": "chn4",
+        "pageTitle": "chn4",
+        "title": "chn4"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/chonline.js",
+        "projectPath": "js/src/chonline.js",
+        "targetPath": "chonline",
+        "pageTitle": "chonline",
+        "title": "chonline"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/grahamscan.js",
+        "projectPath": "js/src/grahamscan.js",
+        "targetPath": "grahamscan",
+        "pageTitle": "grahamscan",
+        "title": "grahamscan"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/grahamscanmono.js",
+        "projectPath": "js/src/grahamscanmono.js",
+        "targetPath": "grahamscanmono",
+        "pageTitle": "grahamscanmono",
+        "title": "grahamscanmono"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/jarvismarch.js",
+        "projectPath": "js/src/jarvismarch.js",
+        "targetPath": "jarvismarch",
+        "pageTitle": "jarvismarch",
+        "title": "jarvismarch"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/kirkpatrickseidel.js",
+        "projectPath": "js/src/kirkpatrickseidel.js",
+        "targetPath": "kirkpatrickseidel",
+        "pageTitle": "kirkpatrickseidel",
+        "title": "kirkpatrickseidel"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/aureooms/dev/js/js-convex-hull-2d/js/src/quickhull.js",
+        "projectPath": "js/src/quickhull.js",
+        "targetPath": "quickhull",
+        "pageTitle": "quickhull",
+        "title": "quickhull"
+      },
+      "depth": 1,
+      "outline": []
     }
   ];
 
