@@ -4,7 +4,7 @@
 	"scripts": [
 		"js/dist/convex-hull-2d.js"
 	],
-	"version": "2.0.2",
+	"version": "3.0.0",
 	"description": "Convex hull algorithms in R^2 code bricks for JavaScript",
 	"main": "js/dist/convex-hull-2d.js",
 	"license": "AGPL-3.0"
