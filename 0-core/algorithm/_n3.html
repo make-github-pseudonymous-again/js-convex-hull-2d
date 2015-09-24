@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head><title>0-core/algorithm/_n3</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="0-core/algorithm/_n3"><meta name="groc-project-path" content="js/src/0-core/algorithm/_n3.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-convex-hull-2d"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-convex-hull-2d/blob/master/js/src/0-core/algorithm/_n3.js">js/src/0-core/algorithm/_n3.js</a></div></div><div id="document"><div class="segment"></div><div class="segment"><div class="comments "><div class="wrapper"><p>Find the convex hull in O(n^3) by keeping any point that
+is not the vertex of an obtuse angle of the set of points.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">const</span> _n3 = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> { crs , dot } , points , take </span>) </span>{
+
+	<span class="hljs-keyword">const</span> n = points.length ;
+
+	<span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span> ; i &lt; n ; ++i ) {
+
+		<span class="hljs-keyword">const</span> a = points[i];
+
+		loopj : <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span> ; j &lt; n ; ++j ) {
+
+			<span class="hljs-keyword">if</span> ( j === i ) <span class="hljs-keyword">continue</span> ;
+
+			<span class="hljs-keyword">const</span> b = points[j];
+
+			<span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> k = <span class="hljs-number">0</span> ; k &lt; n ; ++k ){
+
+				<span class="hljs-keyword">if</span> ( k === i || k === j ) <span class="hljs-keyword">continue</span> ;
+
+				<span class="hljs-keyword">const</span> c = points[k];
+
+				<span class="hljs-keyword">const</span> sin = crs( a, b, c ) ;
+
+				<span class="hljs-keyword">if</span> ( sin &lt; <span class="hljs-number">0</span> || ( sin === <span class="hljs-number">0</span> &amp;&amp; dot( a, b, c ) &lt; <span class="hljs-number">0</span> ) ) <span class="hljs-keyword">continue</span> loopj ;
+
+			}
+
+			take[j] = <span class="hljs-literal">true</span>;
+
+		}
+
+	}
+
+} ;
+
+exports._n3 = _n3 ;</div></div></div></div></body></html>

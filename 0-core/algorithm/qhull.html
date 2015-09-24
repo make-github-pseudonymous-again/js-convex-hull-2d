@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en"><head><title>0-core/algorithm/qhull</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="0-core/algorithm/qhull"><meta name="groc-project-path" content="js/src/0-core/algorithm/qhull.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-convex-hull-2d"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-convex-hull-2d/blob/master/js/src/0-core/algorithm/qhull.js">js/src/0-core/algorithm/qhull.js</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><p>From Wikipedia :</p>
+<p>QuickHull
+Discovered independently in 1977 by W. Eddy and in 1978 by A. Bykat.
+Just like the quicksort algorithm, it has the expected time complexity
+of O(n log n), but may degenerate to Θ(nh) = O(n²) in the worst case.</p>
+<p>-&gt; <a href="https://en.wikipedia.org/wiki/QuickHull">https://en.wikipedia.org/wiki/QuickHull</a></p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">const</span> qhull = <span class="hljs-function"><span class="hljs-keyword">function</span>* (<span class="hljs-params"> crs , lex , set , i , j , u , v , w </span>) </span>{
+
+	<span class="hljs-keyword">let</span> l = i - <span class="hljs-number">1</span> ;
+	<span class="hljs-keyword">let</span> r = j - <span class="hljs-number">1</span> ;
+	<span class="hljs-keyword">let</span> e = r ;
+
+	<span class="hljs-keyword">let</span> minL = <span class="hljs-number">0</span> ; <span class="hljs-keyword">let</span> minR = <span class="hljs-number">0</span> ;
+	<span class="hljs-keyword">let</span> L = -<span class="hljs-number">1</span> ; <span class="hljs-keyword">let</span> R = -<span class="hljs-number">1</span> ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Triangle ( u , v , w ) partioning</p></div></div><div class="code"><div class="wrapper">	<span class="hljs-keyword">while</span> ( l &lt;= r ) {
+
+		<span class="hljs-keyword">const</span> x = set[l] ;
+
+		<span class="hljs-keyword">const</span> sin1 = crs( u , v , x ) ;
+
+		<span class="hljs-keyword">if</span> ( sin1 &lt; <span class="hljs-number">0</span> ) {</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Note that if we allow (3 or more)-colinear vertices then we
+have to make sure that we take only extreme points of these
+as pivot. The only way this kind of scenario can occur is
+when uv (vw) is parallel to these colinear points. Note that
+we only need to compare the points lexicographically to
+ensure we take only extreme points. Note also that if sin1 &lt;
+0 and thus if sin1 === minL (minR) then L !== -1.</p>
+<pre><code>v
+|  \
+| .  x
+|    |
+|  . y &lt;-- y should never be used as pivot
+|..  |
+|    z
+| ./
+u</code></pre></div></div><div class="code"><div class="wrapper">			<span class="hljs-keyword">if</span> ( sin1 &lt; minL || ( sin1 === minL &amp;&amp; lex( x , set[L] ) &lt; <span class="hljs-number">0</span> ) ) {
+				L = l ;
+				minL = sin1 ;
+			}
+
+			++l ;
+			<span class="hljs-keyword">continue</span> ;
+
+		}
+
+		<span class="hljs-keyword">const</span> sin2 = crs( v , w , x ) ;
+
+		<span class="hljs-keyword">if</span> ( sin2 &lt; <span class="hljs-number">0</span> ) {
+
+			<span class="hljs-keyword">const</span> tmp = set[l] ;
+			set[l] = set[r] ;
+			set[r] = tmp ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Same remark as above.</p></div></div><div class="code"><div class="wrapper">			<span class="hljs-keyword">if</span> ( sin2 &lt; minR || ( sin2 === minR &amp;&amp; lex( x , set[R] ) &lt; <span class="hljs-number">0</span> ) ) {
+				R = r;
+				minR = sin2 ;
+			}
+
+			--r ;
+			<span class="hljs-keyword">continue</span> ;
+
+		}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>since all poins are above uw
+all other points are inside triangle uvw</p></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>don&#39;t forget to update R
+in case we move it to r</p></div></div><div class="code"><div class="wrapper">		<span class="hljs-keyword">if</span> ( R === e ) R = r ;
+
+		<span class="hljs-keyword">if</span> ( l !== r ) {
+			<span class="hljs-keyword">const</span> tmp = set[e] ;
+			set[e] = set[r] ;
+			set[r] = tmp ;
+		}
+
+		<span class="hljs-keyword">const</span> tmp = set[l] ;
+		set[l] = set[e] ;
+		set[e] = tmp ;
+
+		--e ;
+		--r ;
+
+	}
+
+	<span class="hljs-keyword">if</span> ( L !== -<span class="hljs-number">1</span> ) {
+
+		<span class="hljs-keyword">const</span> tmp = set[L] ;
+		set[L] = set[i] ;
+		set[i] = tmp ;
+
+		<span class="hljs-keyword">yield</span>* qhull( crs , lex , set , i + <span class="hljs-number">1</span> , l , u , tmp , v ) ;
+
+	}
+
+	<span class="hljs-keyword">yield</span> v ;
+
+	<span class="hljs-keyword">if</span> ( R !== -<span class="hljs-number">1</span> ) {
+
+		<span class="hljs-keyword">const</span> tmp = set[R] ;
+		set[R] = set[l] ;
+		set[l] = tmp ;
+
+		<span class="hljs-keyword">yield</span>* qhull( crs , lex , set , l + <span class="hljs-number">1</span> , e , v , tmp , w ) ;
+
+	}
+
+} ;
+
+exports.qhull = qhull;</div></div></div></div></body></html>

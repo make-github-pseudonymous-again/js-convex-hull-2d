@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en"><head><title>0-core/algorithm/gscan</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="0-core/algorithm/gscan"><meta name="groc-project-path" content="js/src/0-core/algorithm/gscan.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-convex-hull-2d"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-convex-hull-2d/blob/master/js/src/0-core/algorithm/gscan.js">js/src/0-core/algorithm/gscan.js</a></div></div><div id="document"><div class="segment"></div><div class="segment"><div class="comments doc-section"><div class="wrapper"><p>O(n)
+Set must be prealably clocksorted.</p>
+<p>Parameters:</p>
+<ul>
+<li><p><strong>set must be a vertex set.</strong><br/>(input set is set[i:j])</p>
+</li>
+<li><p><strong>i must be an offset.</strong><br/>(inner left bound of interval to work with)</p>
+</li>
+<li><p><strong>j must be an offset.</strong><br/>(outer right bound of interval to work with)</p>
+</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">const</span> gscan = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> crs , points , i , j , hull </span>) </span>{
+
+	hull.push( points[i] ) ;
+	hull.push( points[i + <span class="hljs-number">1</span>] ) ;
+
+	<span class="hljs-keyword">let</span> p = <span class="hljs-number">0</span> ;
+
+	<span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> k = i + <span class="hljs-number">2</span> ; k &lt; j ; ++k ) {
+
+		<span class="hljs-keyword">const</span> u = points[k] ;
+
+		<span class="hljs-keyword">while</span> ( p &gt;= <span class="hljs-number">0</span> &amp;&amp; crs( hull[p] , hull[p + <span class="hljs-number">1</span>] , u ) &lt;= <span class="hljs-number">0</span> ) {
+			hull.pop( ) ;
+			--p ;
+		}
+
+		hull.push( u ) ;
+		++p ;
+
+	}
+
+} ;
+
+exports.gscan = gscan ;</div></div></div></div></body></html>

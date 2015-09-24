@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><title>0-core/algorithm/gscanmono</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="0-core/algorithm/gscanmono"><meta name="groc-project-path" content="js/src/0-core/algorithm/gscanmono.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-convex-hull-2d"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-convex-hull-2d/blob/master/js/src/0-core/algorithm/gscanmono.js">js/src/0-core/algorithm/gscanmono.js</a></div></div><div id="document"><div class="segment"></div><div class="segment"><div class="comments "><div class="wrapper"><p>This method is O(n), the only requirement is that the
+set of vertices should be prealably sorted.</p>
+<p>From Wikipedia :</p>
+<p>Monotone chain aka Andrew&#39;s algorithm — O(n log n)
+Published in 1979 by A. M. Andrew. The algorithm can be seen as a variant of
+Graham scan which sorts the points lexicographically by their coordinates.
+When the input is already sorted, the algorithm takes O(n) time.</p>
+<p>-&gt; <a href="https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain">https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain</a></p>
+<p>hypothesis : set is lexicographically ordered
+( in 2D : sorted according to x then y or y then x )</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">const</span> gscanmono = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> crs , points , i , j , lo </span>) </span>{
+
+	<span class="hljs-keyword">const</span> hi = [] ;
+
+	hi.push( points[i] ) ;
+	hi.push( points[i + <span class="hljs-number">1</span>] ) ;
+	lo.push( points[i] ) ;
+	lo.push( points[i + <span class="hljs-number">1</span>] ) ;
+
+	<span class="hljs-keyword">let</span> p = <span class="hljs-number">0</span> ;
+	<span class="hljs-keyword">let</span> q = <span class="hljs-number">0</span> ;
+
+	<span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> k = i + <span class="hljs-number">2</span> ; k &lt; j ; ++k ) {
+
+		<span class="hljs-keyword">const</span> u = points[k] ;
+
+		<span class="hljs-keyword">while</span> ( p &gt;= <span class="hljs-number">0</span> &amp;&amp; crs( hi[p] , hi[p + <span class="hljs-number">1</span>] , u ) &gt;= <span class="hljs-number">0</span> ) {
+			hi.pop() ;
+			--p ;
+		}
+
+		hi.push( u ) ;
+		++p ;
+
+		<span class="hljs-keyword">while</span> ( q &gt;= <span class="hljs-number">0</span> &amp;&amp; crs( lo[q] , lo[q + <span class="hljs-number">1</span>] , u ) &lt;= <span class="hljs-number">0</span> ) {
+			lo.pop() ;
+			--q ;
+		}
+
+		lo.push( u ) ;
+		++q ;
+
+	}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>enumerate hull vertices
+counter clock wise, in fact ccw if set is monotone <em>increasing</em>,
+cw otherwise</p>
+<pre><code>            * - &lt; - * - &lt; - *
+           /                 \</code></pre>
+<p>hi[0] = lo[0] <em>                   </em> hi[p + 1] = lo[q + 1]
+               \                 /</p>
+<pre><code>            * - &gt; - * - &gt; - *</code></pre>
+<p>Note that the first and last elements of hi are droped since
+they are already in lo</p></div></div><div class="code"><div class="wrapper">	<span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> k = p ; k &gt; <span class="hljs-number">0</span> ; --k ) lo.push( hi[k] ) ;
+
+} ;
+
+
+exports.gscanmono = gscanmono ;</div></div></div></div></body></html>

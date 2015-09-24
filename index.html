@@ -59,6 +59,15 @@ jspm install npm:aureooms-js-convex-hull-2d</code></pre>
 <p>Alternatively, you can use any tool mentioned <a href="http://bower.io/docs/tools/">here</a>.</p>
 <h3 id="jam">jam</h3>
 <pre><code class="lang-js"><span class="hljs-built_in">require</span>( [ <span class="hljs-string">"aureooms-js-convex-hull-2d"</span> ] , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> convexhull2d </span>) </span>{ ... } ) ;</code></pre>
+<h2 id="space">Space</h2>
+<p>The 2^d space system object must have the following static methods:</p>
+<pre><code class="lang-js">space.crs( a , b , c ) ; <span class="hljs-comment">// compute the cross product of ab and bc</span>
+space.dot( a , b , c ) ; <span class="hljs-comment">// compute the dot product of ab and bc</span>
+space.col( a , b , c ) ; <span class="hljs-comment">// test whether 3 points are colinear</span>
+space.pit( x , a , b , c ) ; <span class="hljs-comment">// test whether x is in triangle abc</span>
+space.lex( a , b ) ; <span class="hljs-comment">// &gt; 0 if a comes before b in lex order</span>
+space.colex( a , b ) ; <span class="hljs-comment">// &gt; 0 if a comes before b in colex order</span>
+space.ccw( crs , dot , x ) ; <span class="hljs-comment">// defines a counter clockwise ordering around x</span></code></pre>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://github.com/mikolalysenko/convex-hull">https://github.com/mikolalysenko/convex-hull</a></li>
