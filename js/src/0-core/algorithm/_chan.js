@@ -4,9 +4,9 @@
  */
 
 
-var __chan__ = function ( grahamscan ) {
+const _chan = function ( grahamscan ) {
 
-	var chan = function ( m , set , i , j , hull ) {
+	const chan = function ( m , set , i , j , hull ) {
 
 		var n , hulls , h , k ;
 
@@ -38,4 +38,4 @@ var __chan__ = function ( grahamscan ) {
 
 } ;
 
-exports.__chan__ = __chan__ ;
+exports._chan = _chan ;

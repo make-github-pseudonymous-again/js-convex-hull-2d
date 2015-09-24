@@ -103,6 +103,20 @@ Alternatively, you can use any tool mentioned [here](http://bower.io/docs/tools/
 require( [ "aureooms-js-convex-hull-2d" ] , function ( convexhull2d ) { ... } ) ;
 ```
 
+## Space
+
+The 2^d space system object must have the following static methods:
+
+```js
+space.crs( a , b , c ) ; // compute the cross product of ab and bc
+space.dot( a , b , c ) ; // compute the dot product of ab and bc
+space.col( a , b , c ) ; // test whether 3 points are colinear
+space.pit( x , a , b , c ) ; // test whether x is in triangle abc
+space.lex( a , b ) ; // > 0 if a comes before b in lex order
+space.colex( a , b ) ; // > 0 if a comes before b in colex order
+space.ccw( crs , dot , x ) ; // defines a counter clockwise ordering around x
+```
+
 ## Reference
 
   - https://github.com/mikolalysenko/convex-hull

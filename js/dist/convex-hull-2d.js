@@ -1,25 +1,32 @@
 "use strict";
 
+var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; })();
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
+
 (function () {
 
 	'use strict';
 
 	var definition = function definition(exports, undefined) {
+		var marked2$0 = [_filter].map(regeneratorRuntime.mark);
 
-		/* js/src/akltoussaint.js */
+		/* js/src/0-core */
+		/* js/src/0-core/algorithm */
+		/* js/src/0-core/algorithm/_akltoussaint.js */
 
 		/**
    * Implement Akl–Toussaint heuristic
    * -> https://en.wikipedia.org/wiki/Convex_hull_algorithms#Akl.E2.80.93Toussaint_heuristic
    */
 
-		/* js/src/chan.js */
+		/* js/src/0-core/algorithm/_chan.js */
 
 		/**
    * -> https://en.wikipedia.org/wiki/Chan%27s_algorithm
    */
 
-		var __chan__ = function __chan__(grahamscan) {
+		var _chan = function _chan(grahamscan) {
 
 			var chan = function chan(m, set, i, j, hull) {
 
@@ -48,22 +55,28 @@
 			return chan;
 		};
 
-		exports.__chan__ = __chan__;
+		exports._chan = _chan;
 
-		/* js/src/chdynamic.js */
+		/* js/src/0-core/algorithm/_dynamic.js */
 
 		/**
    * -> https://en.wikipedia.org/wiki/Dynamic_convex_hull
    */
 
-		/* js/src/chincremental.js */
+		/* js/src/0-core/algorithm/_incremental.js */
 
 		/**
    * Incremental convex hull algorithm -- O(n log n)
    * Published in 1984 by Michael Kallay.
    */
 
-		/* js/src/chn2.js */
+		/* js/src/0-core/algorithm/_kirkpatrickseidel.js */
+
+		/**
+   * -> https://en.wikipedia.org/wiki/Kirkpatrick%E2%80%93Seidel_algorithm
+   */
+
+		/* js/src/0-core/algorithm/_n2.js */
 
 		/**
    * Find the convex hull in O(n^2) by checking for every vertex b that there is
@@ -80,264 +93,228 @@
    *
    * Note that cossign is only required to break ties consistently in the case
    * where the data contains (3 or more)-colinear vertices.
+   *
+   * hypothesis : |set| >= 2
+   * @param  {points} points   array of vertices
+   * @param  {take} take inclusion array representation of the convex hull
+   * initialized to true
    */
 
-		var __chn2__ = function __chn2__(sinsign, cossign) {
+		var _n2 = function _n2(_ref, points, take) {
+			var crs = _ref.crs;
+			var dot = _ref.dot;
 
-			/**
-    * hypothesis : |set| >= 2
-    * @param  {set} set   array of vertices
-    * @param  {hull} hull inclusion array representation of the convex hull
-    * initialized to true
-    */
+			var n = points.length;
 
-			var chn2 = function chn2(set, hull) {
+			each: for (var j = 0; j < n; ++j) {
 
-				var i, j, k, a, b, c, n, u, v, sin, cos;
+				// we need i to be different from j
+				// to have a different from b
+				// i is 1 if j is 0, i is 0 otherwise
 
-				n = set.length;
+				var i = +(j === 0);
 
-				each: for (j = 0; j < n; ++j) {
+				var a = points[i];
+				var b = points[j];
 
-					// we need i to be different from j
-					// to have a different from b
-					// i is 1 if j is 0, i is 0 otherwise
+				// we initiate u and v to a and
+				// we will update them in a loop
+				// over vertices of the vertex set
+				// in the case we find a better candidate
 
-					i = +(j === 0);
+				var u = a;
+				var v = a;
 
-					a = set[i];
-					b = set[j];
+				// upon completion of the loop
+				// we will have u and v such that
+				// there is no c in the vertex set such that sin ( a , b , c ) > 0
+				// lying strictly on the right of the line through bu
+				// there is no c in the vertex set such that sin ( a , b , c ) < 0
+				// lying strictly on the left of the line through bv
 
-					// we initiate u and v to a and
-					// we will update them in a loop
-					// over vertices of the vertex set
-					// in the case we find a better candidate
+				for (var k = 1; k < n; ++k) {
 
-					u = v = a;
+					// we can always skip k = 0 since i is 0 when j is not
+					// we also skip the cases where c = b or c = a
 
-					// upon completion of the loop
-					// we will have u and v such that
-					// there is no c in the vertex set such that sin ( a , b , c ) > 0
-					// lying strictly on the right of the line through bu
-					// there is no c in the vertex set such that sin ( a , b , c ) < 0
-					// lying strictly on the left of the line through bv
+					if (k === i || k === j) continue;
 
-					for (k = 1; k < n; ++k) {
+					var c = points[k];
 
-						// we can always skip k = 0 since i is 0 when j is not
-						// we also skip the cases where c = b or c = a
+					var sin1 = crs(a, b, c);
 
-						if (k === i || k === j) continue;
+					// if c is on the left of ab
 
-						c = set[k];
+					//     |
+					//     |
+					// c   b
+					//     |
+					//     a
 
-						sin = sinsign(a, b, c);
+					if (sin1 > 0) {
 
-						// if c is on the left of ab
+						var sin2 = crs(b, u, c);
 
-						//     |
-						//     |
-						// c   b
-						//     |
-						//     a
+						// if c is on the right of bu
 
-						if (sin > 0) {
+						// u  c|             u   |
+						//   \ |               \ |
+						//     b  otherwise      b
+						//     |              c  |
+						//     a                 a
 
-							sin = sinsign(b, u, c);
+						if (sin2 < 0) u = c;
+					}
 
-							// if c is on the right of bu
+					// if c is on the right of ab
 
-							// u  c|             u   |
-							//   \ |               \ |
-							//     b  otherwise      b
-							//     |              c  |
-							//     a                 a
+					//     |
+					//     |
+					//     b   c
+					//     |
+					//     a
 
-							if (sin < 0) u = c;
+					else if (sin1 < 0) {
+
+							var sin2 = crs(b, v, c);
+
+							// if c is on the left of bv
+
+							// |c  v             |   v
+							// | /               | /
+							// b      otherwise  b
+							// |                 |  c
+							// a                 a
+
+							if (sin2 > 0) v = c;
 						}
 
-						// if c is on the right of ab
+						// when sin = 0 then we need to check if b
+						// lies on a segment from a to c
 
-						//     |
-						//     |
-						//     b   c
-						//     |
-						//     a
+						else {
 
-						else if (sin < 0) {
+								var cos = dot(a, b, c);
 
-								sin = sinsign(b, v, c);
+								// |                     |    |
+								// c                     |    |
+								// |                     |    |
+								// b      otherwise      b or b
+								// |                     c    |
+								// a                     a    a
+								// |                     |    c
 
-								// if c is on the left of bv
-
-								// |c  v             |   v
-								// | /               | /
-								// b      otherwise  b
-								// |                 |  c
-								// a                 a
-
-								if (sin > 0) v = c;
-							}
-
-							// when sin = 0 then we need to check if b
-							// lies on a segment from a to c
-
-							else {
-
-									cos = cossign(a, b, c);
-
-									// |                     |    |
-									// c                     |    |
-									// |                     |    |
-									// b      otherwise      b or b
-									// |                     c    |
-									// a                     a    a
-									// |                     |    c
-
-									if (cos < 0) {
-										hull[j] = false;
-										continue each;
-									}
+								if (cos < 0) {
+									take[j] = false;
+									continue each;
 								}
-					}
-
-					// if we found candidates for both sides of line ab
-					// and b is on the other side of uv relative to a
-					// then b is part of the convex hull
-
-					// u---|---v                 |   v
-					//   \ | /                   b /
-					//     b      otherwise      |
-					//     |                   / |
-					//     a                 u   a
-
-					if (u !== a && v !== a && sinsign(u, v, b) <= 0) {
-						hull[j] = false;
-					}
+							}
 				}
-			};
 
-			return chn2;
+				// if we found candidates for both sides of line ab
+				// and b is on the other side of uv relative to a
+				// then b is part of the convex hull
+
+				// u---|---v                 |   v
+				//   \ | /                   b /
+				//     b      otherwise      |
+				//     |                   / |
+				//     a                 u   a
+
+				if (u !== a && v !== a && crs(u, v, b) <= 0) take[j] = false;
+			}
 		};
 
-		exports.__chn2__ = __chn2__;
+		exports._n2 = _n2;
 
-		/* js/src/chn3.js */
+		/* js/src/0-core/algorithm/_n3.js */
 
 		/**
    * Find the convex hull in O(n^3) by keeping any point that
    * is not the vertex of an obtuse angle of the set of points.
    */
 
-		var __chn3__ = function __chn3__(sinsign, cossign) {
+		var _n3 = function _n3(_ref2, points, take) {
+			var crs = _ref2.crs;
+			var dot = _ref2.dot;
 
-			var chn3 = function chn3(set, hull) {
+			var n = points.length;
 
-				var i, j, k, a, b, c, len, sin;
+			for (var i = 0; i < n; ++i) {
 
-				len = set.length;
+				var a = points[i];
 
-				for (i = 0; i < len; ++i) {
+				loopj: for (var j = 0; j < n; ++j) {
 
-					a = set[i];
+					if (j === i) continue;
 
-					loopj: for (j = 0; j < len; ++j) {
+					var b = points[j];
 
-						if (j === i) {
-							continue;
-						}
+					for (var k = 0; k < n; ++k) {
 
-						b = set[j];
+						if (k === i || k === j) continue;
 
-						for (k = 0; k < len; ++k) {
+						var c = points[k];
 
-							if (k === i || k === j) {
-								continue;
-							}
+						var sin = crs(a, b, c);
 
-							c = set[k];
-
-							sin = sinsign(a, b, c);
-
-							if (sin < 0 || sin === 0 && cossign(a, b, c) < 0) {
-								continue loopj;
-							}
-						}
-
-						hull[j] = true;
+						if (sin < 0 || sin === 0 && dot(a, b, c) < 0) continue loopj;
 					}
-				}
-			};
 
-			return chn3;
+					take[j] = true;
+				}
+			}
 		};
 
-		exports.__chn3__ = __chn3__;
+		exports._n3 = _n3;
 
-		/* js/src/chn4.js */
+		/* js/src/0-core/algorithm/_n4.js */
 
 		/**
    * Find the convex hull in O(n^4) by removing any point lying inside
    * a triangle of the set of points.
    */
 
-		var __chn4__ = function __chn4__(colinear, pit) {
+		var _n4 = function _n4(_ref3, points, take) {
+			var col = _ref3.col;
+			var pit = _ref3.pit;
 
-			var chn4 = function chn4(set, hull) {
+			var n = points.length;
 
-				var i, j, k, a, b, c, x, len;
+			for (var i = 0; i < n; ++i) {
 
-				len = set.length;
+				if (!take[i]) continue;
 
-				for (i = 0; i < len; ++i) {
+				var a = points[i];
 
-					if (!hull[i]) {
-						continue;
-					}
+				for (var j = 0; j < n; ++j) {
 
-					a = set[i];
+					if (j === i || !take[j]) continue;
 
-					for (j = 0; j < len; ++j) {
+					var b = points[j];
 
-						if (j === i || !hull[j]) {
-							continue;
-						}
+					for (var k = 0; k < n; ++k) {
 
-						b = set[j];
+						if (k === i || k === j || !take[k]) continue;
 
-						for (k = 0; k < len; ++k) {
+						var c = points[k];
 
-							if (k === i || k === j || !hull[k]) {
-								continue;
-							}
+						if (col(a, b, c)) continue;
 
-							c = set[k];
+						for (var x = 0; x < n; ++x) {
 
-							if (colinear(a, b, c)) {
-								continue;
-							}
+							if (x === i || x === j || x === k || !take[x]) continue;
 
-							for (x = 0; x < len; ++x) {
-
-								if (x === i || x === j || x === k || !hull[x]) {
-									continue;
-								}
-
-								if (pit(set[x], a, b, c)) {
-									hull[x] = false;
-								}
-							}
+							if (pit(points[x], a, b, c)) take[x] = false;
 						}
 					}
 				}
-			};
-
-			return chn4;
+			}
 		};
 
-		exports.__chn4__ = __chn4__;
+		exports._n4 = _n4;
 
-		/* js/src/chonline.js */
+		/* js/src/0-core/algorithm/_online.js */
 
 		var binary_ext_sin_search = function binary_ext_sin_search(ch, l, r, o, p) {
 			var i = o;
@@ -403,46 +380,39 @@
 		exports.ch_online_add = ch_online_add;
 		exports.ch_online_rm = ch_online_rm;
 
-		/* js/src/grahamscan.js */
+		/* js/src/0-core/algorithm/gscan.js */
 
-		var __grahamscan__ = function __grahamscan__(sinsign) {
+		/**
+   * O(n)
+   * Set must be prealably clocksorted.
+   * @param {vertex set} set input set is set[i:j]
+   * @param {offset} i inner left bound of interval to work with
+   * @param {offset} j outer right bound of interval to work with
+   */
+		var gscan = function gscan(crs, points, i, j, hull) {
 
-			/**
-    * O(n)
-    * Set must be prealably clocksorted.
-    * @param {vertex set} set input set is set[i:j]
-    * @param {offset} i inner left bound of interval to work with
-    * @param {offset} j outer right bound of interval to work with
-    */
-			var grahamscan = function grahamscan(set, i, j, hull) {
+			hull.push(points[i]);
+			hull.push(points[i + 1]);
 
-				var p, k, u;
+			var p = 0;
 
-				hull.push(set[i]);
-				hull.push(set[i + 1]);
+			for (var k = i + 2; k < j; ++k) {
 
-				p = 0;
+				var u = points[k];
 
-				for (k = i + 2; k < j; ++k) {
-
-					u = set[k];
-
-					while (p >= 0 && sinsign(hull[p], hull[p + 1], u) <= 0) {
-						hull.pop();
-						--p;
-					}
-
-					hull.push(u);
-					++p;
+				while (p >= 0 && crs(hull[p], hull[p + 1], u) <= 0) {
+					hull.pop();
+					--p;
 				}
-			};
 
-			return grahamscan;
+				hull.push(u);
+				++p;
+			}
 		};
 
-		exports.__grahamscan__ = __grahamscan__;
+		exports.gscan = gscan;
 
-		/* js/src/grahamscanmono.js */
+		/* js/src/0-core/algorithm/gscanmono.js */
 
 		/**
    * This method is O(n), the only requirement is that the
@@ -458,78 +428,64 @@
    *
    * -> https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain
    *
+   * hypothesis : set is lexicographically ordered
+   * ( in 2D : sorted according to x then y or y then x )
    */
 
-		var __grahamscanmono__ = function __grahamscanmono__(sinsign) {
+		var gscanmono = function gscanmono(crs, points, i, j, lo) {
 
-			/**
-    * hypothesis : set is lexicographically ordered
-    * ( in 2D : sorted according to x then y or y then x )
-    * @param  {[type]} set  [description]
-    * @param  {[type]} hull [description]
-    * @return {[type]}      [description]
-    */
+			var hi = [];
 
-			var grahamscanmono = function grahamscanmono(set, i, j, lo) {
+			hi.push(points[i]);
+			hi.push(points[i + 1]);
+			lo.push(points[i]);
+			lo.push(points[i + 1]);
 
-				var k, n, hi, u, p, q;
+			var p = 0;
+			var q = 0;
 
-				n = set.length;
-				hi = [];
+			for (var k = i + 2; k < j; ++k) {
 
-				hi.push(set[i]);
-				hi.push(set[i + 1]);
-				lo.push(set[i]);
-				lo.push(set[i + 1]);
+				var u = points[k];
 
-				p = 0;
-				q = 0;
-
-				for (k = i + 2; k < j; ++k) {
-
-					u = set[k];
-
-					while (p >= 0 && sinsign(hi[p], hi[p + 1], u) >= 0) {
-						hi.pop();
-						--p;
-					}
-
-					hi.push(u);
-					++p;
-
-					while (q >= 0 && sinsign(lo[q], lo[q + 1], u) <= 0) {
-						lo.pop();
-						--q;
-					}
-
-					lo.push(u);
-					++q;
+				while (p >= 0 && crs(hi[p], hi[p + 1], u) >= 0) {
+					hi.pop();
+					--p;
 				}
 
-				// enumerate hull vertices
-				// counter clock wise, in fact ccw if set is monotone *increasing*,
-				// cw otherwise
-				//
-				//                 * - < - * - < - *
-				//                /                 \
-				// hi[0] = lo[0] *                   * hi[p + 1] = lo[q + 1]
-				//                \                 /
-				//                 * - > - * - > - *
-				//
-				// Note that the first and last elements of hi are droped since
-				// they are already in lo
+				hi.push(u);
+				++p;
 
-				for (i = p; i > 0; --i) {
-					lo.push(hi[i]);
+				while (q >= 0 && crs(lo[q], lo[q + 1], u) <= 0) {
+					lo.pop();
+					--q;
 				}
-			};
 
-			return grahamscanmono;
+				lo.push(u);
+				++q;
+			}
+
+			// enumerate hull vertices
+			// counter clock wise, in fact ccw if set is monotone *increasing*,
+			// cw otherwise
+			//
+			//                 * - < - * - < - *
+			//                /                 \
+			// hi[0] = lo[0] *                   * hi[p + 1] = lo[q + 1]
+			//                \                 /
+			//                 * - > - * - > - *
+			//
+			// Note that the first and last elements of hi are droped since
+			// they are already in lo
+
+			for (var k = p; k > 0; --k) {
+				lo.push(hi[k]);
+			}
 		};
 
-		exports.__grahamscanmono__ = __grahamscanmono__;
+		exports.gscanmono = gscanmono;
 
-		/* js/src/jarvismarch.js */
+		/* js/src/0-core/algorithm/jmarch.js */
 
 		/**
    * From Wikipedia :
@@ -543,87 +499,91 @@
    *
    * -> https://en.wikipedia.org/wiki/Gift_wrapping_algorithm
    *
+   * The idea is to wrap the set of points. The technique is the following.
+   *
+   * You first select a vertex for which you are sure that it is part of the
+   * convex hull. For example you can choose the vertex that is first in
+   * lexicographical order over the coordinates in two dimensions, i.e. find
+   * all vertices that have the smallest x coordinate and if there is more
+   * than one then keep only the one with the smallest y coordinate.
+   *
+   * From this selected vertex you compute the next one. The next one is
+   * defined as the one that comes after in clockwise order.
+   *
+   *    |
+   *    |     In this example u is the selected vertex and v the next one.
+   *    |     v is such that there is no vertex w with sin( u , v , w ) < 0
+   *    u     i.e. lying on the right of uv because otherwise u was not
+   *     \    part of the hull in the first place.
+   *      v
+   *
+   * To solve the problem completely we simply iterate over all successive uv
+   * pairs ( we replace u with v after each iteration ). We stop when we made
+   * the complete loop around the set of vertices, i.e when the next v is the
+   * very first u.
+   *
+   *
+   * Hypotheses:
+   *   - |set| >= 2
+   *   - set[0] must be part of the hull ( if |set| = 2 this is the
+   *   only thing you have to do )
+   *
    */
-		var __jarvismarch__ = function __jarvismarch__(sinsign, cossign) {
 
-			/**
-    * The idea is to wrap the set of points. The technique is the following.
-    *
-    * You first select a vertex for which you are sure that it is part of the
-    * convex hull. For example you can choose the vertex that is first in
-    * lexicographical order over the coordinates in two dimensions, i.e. find
-    * all vertices that have the smallest x coordinate and if there is more
-    * than one then keep only the one with the smallest y coordinate.
-    *
-    * From this selected vertex you compute the next one. The next one is
-    * defined as the one that comes after in clockwise order.
-    *
-    *    |
-    *    |     In this example u is the selected vertex and v the next one.
-    *    |     v is such that there is no vertex w with sin( u , v , w ) < 0
-    *    u     i.e. lying on the right of uv because otherwise u was not
-    *     \    part of the hull in the first place.
-    *      v
-    *
-    * To solve the problem completely we simply iterate over all successive uv
-    * pairs ( we replace u with v after each iteration ). We stop when we made
-    * the complete loop around the set of vertices, i.e when the next v is the
-    * very first u.
-    *
-    *
-    * Hypotheses:
-    *   - |set| >= 2
-    *   - set[0] must be part of the hull ( if |set| = 2 this is the
-    *   only thing you have to do )
-    *
-    * @param {array} set is the input vertex set
-    * @param {array} hull is the ouput hull, we omit to add set[0] voluntarily
-    */
+		var jmarch = regeneratorRuntime.mark(function jmarch(crs, dot, points) {
+			var n, origin, u, j, v, w, sin;
+			return regeneratorRuntime.wrap(function jmarch$(context$3$0) {
+				while (1) switch (context$3$0.prev = context$3$0.next) {
+					case 0:
+						n = points.length;
+						origin = points[0];
+						u = origin;
+						j = 1;
 
-			var jarvismarch = function jarvismarch(set, hull) {
+					case 4:
+						if (!true) {
+							context$3$0.next = 15;
+							break;
+						}
 
-				var n, j, u, v, w, origin, sin;
+						v = points[j];
 
-				n = set.length;
+						for (++j; j < n; ++j) {
+							w = points[j];
+							sin = crs(u, v, w);
 
-				origin = u = set[0];
+							if (sin < 0 || sin === 0 && dot(u, v, w) < 0) v = w;
+						}
 
-				j = 1;
+						if (!(v === origin)) {
+							context$3$0.next = 9;
+							break;
+						}
 
-				while (true) {
+						return context$3$0.abrupt("break", 15);
 
-					v = set[j];
+					case 9:
+						context$3$0.next = 11;
+						return v;
 
-					for (++j; j < n; ++j) {
+					case 11:
 
-						w = set[j];
+						u = v;
+						j = 0;
 
-						sin = sinsign(u, v, w);
+						context$3$0.next = 4;
+						break;
 
-						if (sin < 0 || sin === 0 && cossign(u, v, w) < 0) v = w;
-					}
-
-					if (v === origin) break;
-
-					hull.push(v);
-
-					u = v;
-					j = 0;
+					case 15:
+					case "end":
+						return context$3$0.stop();
 				}
-			};
+			}, jmarch, this);
+		});
 
-			return jarvismarch;
-		};
+		exports.jmarch = jmarch;
 
-		exports.__jarvismarch__ = __jarvismarch__;
-
-		/* js/src/kirkpatrickseidel.js */
-
-		/**
-   * -> https://en.wikipedia.org/wiki/Kirkpatrick%E2%80%93Seidel_algorithm
-   */
-
-		/* js/src/quickhull.js */
+		/* js/src/0-core/algorithm/qhull.js */
 		/**
    * From Wikipedia :
    *
@@ -635,36 +595,41 @@
    * -> https://en.wikipedia.org/wiki/QuickHull
    *
    */
-		var __quickhull__ = function __quickhull__(sinsign, compare) {
+		var qhull = regeneratorRuntime.mark(function qhull(crs, lex, set, i, j, u, v, w) {
+			var l, r, e, minL, minR, L, R, x, sin1, sin2, _tmp, _tmp2, tmp;
 
-			var quickhull = function quickhull(set, i, j, u, v, w, hull) {
+			return regeneratorRuntime.wrap(function qhull$(context$3$0) {
+				while (1) switch (context$3$0.prev = context$3$0.next) {
+					case 0:
+						l = i - 1;
+						r = j - 1;
+						e = r;
+						minL = 0;
+						minR = 0;
+						L = -1;
+						R = -1;
 
-				var c, sin, minL, minR, L, R, tmp, l, r, e, x;
+					case 7:
+						if (!(l <= r)) {
+							context$3$0.next = 31;
+							break;
+						}
 
-				l = i - 1;
-				r = j - 1;
-				e = r;
+						x = set[l];
+						sin1 = crs(u, v, x);
 
-				minL = minR = 0;
-				L = R = -1;
-
-				// Triangle ( u , v , w ) partioning
-
-				while (l <= r) {
-
-					x = set[l];
-
-					sin = sinsign(u, v, x);
-
-					if (sin < 0) {
+						if (!(sin1 < 0)) {
+							context$3$0.next = 14;
+							break;
+						}
 
 						// Note that if we allow (3 or more)-colinear vertices then we
 						// have to make sure that we take only extreme points of these
 						// as pivot. The only way this kind of scenario can occur is
 						// when uv (vw) is parallel to these colinear points. Note that
 						// we only need to compare the points lexicographically to
-						// ensure we take only extreme points. Note also that if sin <
-						// 0 and thus if sin === minL (minR) then L !== -1.
+						// ensure we take only extreme points. Note also that if sin1 <
+						// 0 and thus if sin1 === minL (minR) then L !== -1.
 						//
 						//     v
 						//     |  \
@@ -678,80 +643,396 @@
 						//
 						//
 
-						if (sin < minL || sin === minL && compare(x, set[L]) < 0) {
+						if (sin1 < minL || sin1 === minL && lex(x, set[L]) < 0) {
 							L = l;
-							minL = sin;
+							minL = sin1;
 						}
 
 						++l;
-						continue;
-					}
+						return context$3$0.abrupt("continue", 7);
 
-					sin = sinsign(v, w, x);
+					case 14:
+						sin2 = crs(v, w, x);
 
-					if (sin < 0) {
+						if (!(sin2 < 0)) {
+							context$3$0.next = 22;
+							break;
+						}
 
-						tmp = set[l];
+						_tmp = set[l];
+
 						set[l] = set[r];
-						set[r] = tmp;
+						set[r] = _tmp;
 
 						// Same remark as above.
 
-						if (sin < minR || sin === minR && compare(x, set[R]) < 0) {
+						if (sin2 < minR || sin2 === minR && lex(x, set[R]) < 0) {
 							R = r;
-							minR = sin;
+							minR = sin2;
 						}
 
 						--r;
-						continue;
-					}
+						return context$3$0.abrupt("continue", 7);
 
-					// since all poins are above uw
-					// all other points are inside triangle uvw
+					case 22:
 
-					// don't forget to update R
-					// in case we move it to r
-					if (R === e) R = r;
+						// since all poins are above uw
+						// all other points are inside triangle uvw
 
-					if (l !== r) {
-						tmp = set[e];
-						set[e] = set[r];
-						set[r] = tmp;
-					}
+						// don't forget to update R
+						// in case we move it to r
+						if (R === e) R = r;
 
-					tmp = set[l];
-					set[l] = set[e];
-					set[e] = tmp;
+						if (l !== r) {
+							_tmp2 = set[e];
 
-					--e;
-					--r;
+							set[e] = set[r];
+							set[r] = _tmp2;
+						}
+
+						tmp = set[l];
+
+						set[l] = set[e];
+						set[e] = tmp;
+
+						--e;
+						--r;
+
+						context$3$0.next = 7;
+						break;
+
+					case 31:
+						if (!(L !== -1)) {
+							context$3$0.next = 36;
+							break;
+						}
+
+						tmp = set[L];
+
+						set[L] = set[i];
+						set[i] = tmp;
+
+						return context$3$0.delegateYield(qhull(crs, lex, set, i + 1, l, u, tmp, v), "t0", 36);
+
+					case 36:
+						context$3$0.next = 38;
+						return v;
+
+					case 38:
+						if (!(R !== -1)) {
+							context$3$0.next = 43;
+							break;
+						}
+
+						tmp = set[R];
+
+						set[R] = set[l];
+						set[l] = tmp;
+
+						return context$3$0.delegateYield(qhull(crs, lex, set, l + 1, e, v, tmp, w), "t1", 43);
+
+					case 43:
+					case "end":
+						return context$3$0.stop();
 				}
+			}, qhull, this);
+		});
 
-				if (L !== -1) {
+		exports.qhull = qhull;
 
-					tmp = set[L];
-					set[L] = set[i];
-					set[i] = tmp;
+		/* js/src/0-core/lib */
+		/* js/src/0-core/lib/array */
+		/* js/src/0-core/lib/array/argmax.js */
+		var argmax = function argmax(compare, a, i, j) {
 
-					quickhull(set, i + 1, l, u, tmp, v, hull);
+			var k, key, tmp;
+
+			if (i >= j) return undefined;
+
+			k = i;
+			key = a[k];
+
+			for (++i; i < j; ++i) {
+
+				tmp = a[i];
+
+				if (compare(tmp, key) > 0) {
+					k = i;
+					key = tmp;
 				}
+			}
 
-				hull.push(v);
-
-				if (R !== -1) {
-
-					tmp = set[R];
-					set[R] = set[l];
-					set[l] = tmp;
-
-					quickhull(set, l + 1, e, v, tmp, w, hull);
-				}
-			};
-
-			return quickhull;
+			return k;
 		};
 
-		exports.__quickhull__ = __quickhull__;
+		/* js/src/0-core/lib/array/argmin.js */
+		var argmin = function argmin(compare, a, i, j) {
+
+			var k, key, tmp;
+
+			if (i >= j) return undefined;
+
+			k = i;
+			key = a[k];
+
+			for (++i; i < j; ++i) {
+
+				tmp = a[i];
+
+				if (compare(tmp, key) < 0) {
+					k = i;
+					key = tmp;
+				}
+			}
+
+			return k;
+		};
+
+		/* js/src/0-core/sugar */
+		/* js/src/0-core/sugar/_alloc.js */
+		var _alloc = function _alloc(value) {
+
+			return function (n) {
+
+				var a = new Array(n);
+
+				for (var i = 0; i < n; ++i) {
+					a[i] = value;
+				}return a;
+			};
+		};
+
+		exports._alloc = _alloc;
+
+		/* js/src/0-core/sugar/_filter.js */
+
+		function _filter(take, set) {
+			var n, i;
+			return regeneratorRuntime.wrap(function _filter$(context$3$0) {
+				while (1) switch (context$3$0.prev = context$3$0.next) {
+					case 0:
+						n = take.length;
+						i = 0;
+
+					case 2:
+						if (!(i < n)) {
+							context$3$0.next = 9;
+							break;
+						}
+
+						if (!take[i]) {
+							context$3$0.next = 6;
+							break;
+						}
+
+						context$3$0.next = 6;
+						return set[i];
+
+					case 6:
+						++i;
+						context$3$0.next = 2;
+						break;
+
+					case 9:
+					case "end":
+						return context$3$0.stop();
+				}
+			}, marked2$0[0], this);
+		}
+
+		/* js/src/0-core/sugar/_from.js */
+
+		var _from = function _from(findhull, alloc) {
+
+			return function (space, points) {
+
+				var take = alloc(points.length);
+
+				findhull(space, points, take);
+
+				return sort(space, [].concat(_toConsumableArray(_filter(take, points))));
+			};
+		};
+
+		exports._from = _from;
+
+		/* js/src/0-core/sugar/corners.js */
+
+		var corners = function corners(_ref4, points) {
+			var lex = _ref4.lex;
+			var colex = _ref4.colex;
+
+			var n = points.length;
+
+			var bottomleft = argmin(lex, points, 0, n);
+			var a = points[bottomleft];
+			points[bottomleft] = points[0];
+			points[0] = a;
+
+			var rightbottom = argmin(colex, points, 1, n);
+			var b = points[rightbottom];
+			points[rightbottom] = points[1];
+			points[1] = b;
+
+			var topright = argmax(lex, points, 2, n);
+			var c = points[topright];
+			points[topright] = points[2];
+			points[2] = c;
+
+			var lefttop = argmax(colex, points, 3, n);
+			var d = points[lefttop];
+			points[lefttop] = points[3];
+			points[3] = d;
+
+			//          d          c
+			//                -----
+			//           -----
+			//      -----
+			//     a
+			//
+			//                               b
+
+			return [a, b, c, d];
+		};
+
+		exports.corners = corners;
+
+		/* js/src/0-core/sugar/origin.js */
+
+		var origin = function origin(_ref5, points) {
+			var lex = _ref5.lex;
+
+			var bottomleft = argmin(lex, points, 0, points.length);
+			var a = points[bottomleft];
+			points[bottomleft] = points[0];
+			points[0] = a;
+
+			//                -----
+			//         -----
+			//       ----  -- - -- - -- -
+			//      -----  --- -- --
+			//     ------
+			//     a ---      ----
+			//        --- - -- - -
+			//          -- - -- -
+
+			return a;
+		};
+
+		exports.origin = origin;
+
+		/* js/src/0-core/sugar/sort.js */
+
+		var sort = function sort(space, points) {
+
+			var a = origin(space, points);
+
+			return [a].concat(points.slice(1).sort(space.ccw(space.crs, space.dot, a)));
+		};
+
+		exports.sort = sort;
+
+		/* js/src/1-api */
+		/* js/src/1-api/grahamscan.js */
+		var grahamscan = function grahamscan(space, _points) {
+
+			var points = sort(space, [].concat(_toConsumableArray(_points)));
+
+			var hull = [];
+
+			gscan(space.crs, points, 0, points.length, hull);
+
+			return hull;
+		};
+
+		exports.grahamscan = grahamscan;
+
+		/* js/src/1-api/grahamscanmono.js */
+		var grahamscanmono = function grahamscanmono(space, _points) {
+
+			var points = [].concat(_toConsumableArray(_points)).sort(space.lex);
+
+			var hull = [];
+
+			gscanmono(space.crs, points, 0, points.length, hull);
+
+			return hull;
+		};
+
+		exports.grahamscanmono = grahamscanmono;
+
+		/* js/src/1-api/jarvismarch.js */
+		var jarvismarch = regeneratorRuntime.mark(function jarvismarch(space, _points) {
+			var points;
+			return regeneratorRuntime.wrap(function jarvismarch$(context$3$0) {
+				while (1) switch (context$3$0.prev = context$3$0.next) {
+					case 0:
+						points = [].concat(_toConsumableArray(_points));
+						context$3$0.next = 3;
+						return origin(space, points);
+
+					case 3:
+						return context$3$0.delegateYield(jmarch(space.crs, space.dot, points), "t0", 4);
+
+					case 4:
+					case "end":
+						return context$3$0.stop();
+				}
+			}, jarvismarch, this);
+		});
+
+		exports.jarvismarch = jarvismarch;
+
+		/* js/src/1-api/n2.js */
+		var n2 = _from(_n2, _alloc(true));
+		exports.n2 = n2;
+
+		/* js/src/1-api/n3.js */
+		var n3 = _from(_n3, _alloc(false));
+		exports.n3 = n3;
+
+		/* js/src/1-api/n4.js */
+		var n4 = _from(_n4, _alloc(true));
+		exports.n4 = n4;
+
+		/* js/src/1-api/quickhull.js */
+		var quickhull = regeneratorRuntime.mark(function quickhull(space, _points) {
+			var points, n, _corners, _corners2, a, b, c, d, crs, lex;
+
+			return regeneratorRuntime.wrap(function quickhull$(context$3$0) {
+				while (1) switch (context$3$0.prev = context$3$0.next) {
+					case 0:
+						points = [].concat(_toConsumableArray(_points));
+						n = points.length;
+						_corners = corners(space, points);
+						_corners2 = _slicedToArray(_corners, 4);
+						a = _corners2[0];
+						b = _corners2[1];
+						c = _corners2[2];
+						d = _corners2[3];
+						crs = space.crs;
+						lex = space.lex;
+						context$3$0.next = 12;
+						return a;
+
+					case 12:
+						return context$3$0.delegateYield(qhull(crs, lex, points, 4, n, a, b, c), "t0", 13);
+
+					case 13:
+						context$3$0.next = 15;
+						return c;
+
+					case 15:
+						return context$3$0.delegateYield(qhull(crs, lex, points, 4, n, c, d, a), "t1", 16);
+
+					case 16:
+					case "end":
+						return context$3$0.stop();
+				}
+			}, quickhull, this);
+		});
+
+		exports.quickhull = quickhull;
 
 		return exports;
 	};
@@ -765,3 +1046,5 @@
 		definition(window["convexhull2d"] = {});
 	} else console.error("unable to detect type of module to define for aureooms-js-convex-hull-2d");
 })();
+
+// Triangle ( u , v , w ) partioning
