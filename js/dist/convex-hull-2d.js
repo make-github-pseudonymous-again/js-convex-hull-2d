@@ -741,6 +741,73 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 		exports.qhull = qhull;
 
 		/* js/src/0-core/lib */
+		/* js/src/0-core/lib/_alloc.js */
+		var _alloc = function _alloc(value) {
+
+			return function (n) {
+
+				var a = new Array(n);
+
+				for (var i = 0; i < n; ++i) {
+					a[i] = value;
+				}return a;
+			};
+		};
+
+		exports._alloc = _alloc;
+
+		/* js/src/0-core/lib/_filter.js */
+
+		function _filter(take, set) {
+			var n, i;
+			return regeneratorRuntime.wrap(function _filter$(context$3$0) {
+				while (1) switch (context$3$0.prev = context$3$0.next) {
+					case 0:
+						n = take.length;
+						i = 0;
+
+					case 2:
+						if (!(i < n)) {
+							context$3$0.next = 9;
+							break;
+						}
+
+						if (!take[i]) {
+							context$3$0.next = 6;
+							break;
+						}
+
+						context$3$0.next = 6;
+						return set[i];
+
+					case 6:
+						++i;
+						context$3$0.next = 2;
+						break;
+
+					case 9:
+					case "end":
+						return context$3$0.stop();
+				}
+			}, marked2$0[0], this);
+		}
+
+		/* js/src/0-core/lib/_from.js */
+
+		var _from = function _from(findhull, alloc) {
+
+			return function (space, points) {
+
+				var take = alloc(points.length);
+
+				findhull(space, points, take);
+
+				return sort(space, [].concat(_toConsumableArray(_filter(take, points))));
+			};
+		};
+
+		exports._from = _from;
+
 		/* js/src/0-core/lib/array */
 		/* js/src/0-core/lib/array/argmax.js */
 		var argmax = function argmax(compare, a, i, j) {
@@ -788,75 +855,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 			return k;
 		};
 
-		/* js/src/0-core/sugar */
-		/* js/src/0-core/sugar/_alloc.js */
-		var _alloc = function _alloc(value) {
-
-			return function (n) {
-
-				var a = new Array(n);
-
-				for (var i = 0; i < n; ++i) {
-					a[i] = value;
-				}return a;
-			};
-		};
-
-		exports._alloc = _alloc;
-
-		/* js/src/0-core/sugar/_filter.js */
-
-		function _filter(take, set) {
-			var n, i;
-			return regeneratorRuntime.wrap(function _filter$(context$3$0) {
-				while (1) switch (context$3$0.prev = context$3$0.next) {
-					case 0:
-						n = take.length;
-						i = 0;
-
-					case 2:
-						if (!(i < n)) {
-							context$3$0.next = 9;
-							break;
-						}
-
-						if (!take[i]) {
-							context$3$0.next = 6;
-							break;
-						}
-
-						context$3$0.next = 6;
-						return set[i];
-
-					case 6:
-						++i;
-						context$3$0.next = 2;
-						break;
-
-					case 9:
-					case "end":
-						return context$3$0.stop();
-				}
-			}, marked2$0[0], this);
-		}
-
-		/* js/src/0-core/sugar/_from.js */
-
-		var _from = function _from(findhull, alloc) {
-
-			return function (space, points) {
-
-				var take = alloc(points.length);
-
-				findhull(space, points, take);
-
-				return sort(space, [].concat(_toConsumableArray(_filter(take, points))));
-			};
-		};
-
-		exports._from = _from;
-
-		/* js/src/0-core/sugar/corners.js */
+		/* js/src/0-core/lib/corners.js */
 
 		var corners = function corners(_ref4, points) {
 			var lex = _ref4.lex;
@@ -897,7 +896,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 		exports.corners = corners;
 
-		/* js/src/0-core/sugar/origin.js */
+		/* js/src/0-core/lib/origin.js */
 
 		var origin = function origin(_ref5, points) {
 			var lex = _ref5.lex;
@@ -921,7 +920,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 		exports.origin = origin;
 
-		/* js/src/0-core/sugar/sort.js */
+		/* js/src/0-core/lib/sort.js */
 
 		var sort = function sort(space, points) {
 
