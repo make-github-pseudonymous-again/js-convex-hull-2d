@@ -5,7 +5,7 @@
 	"main": "js/dist/convex-hull-2d.js",
 	"dependencies": {},
 	"devDependencies": {
-		"aureooms-js-array": "^3.1.0",
+		"aureooms-js-array": "^4.0.0",
 		"aureooms-js-cg": "^2.0.1",
 		"aureooms-js-compare": "^1.4.4",
 		"aureooms-js-functools": "^2.0.3",
