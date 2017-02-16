@@ -1,16 +1,16 @@
 {
-	"name": "aureooms-js-convex-hull-2d",
+	"name": "@aureooms/js-convex-hull-2d",
 	"description": "Convex hull algorithms in R^2 code bricks for JavaScript",
 	"version": "3.0.0",
 	"main": "js/dist/convex-hull-2d.js",
 	"dependencies": {},
 	"devDependencies": {
-		"aureooms-js-array": "^4.0.0",
-		"aureooms-js-cg": "^2.0.1",
-		"aureooms-js-compare": "^1.4.4",
-		"aureooms-js-functools": "^2.0.3",
-		"aureooms-js-heapsort": "^9.0.0",
-		"aureooms-js-itertools": "^3.0.0",
+		"@aureooms/js-array": "^4.0.0",
+		"@aureooms/js-cg": "^2.0.1",
+		"@aureooms/js-compare": "^1.4.4",
+		"@aureooms/js-functools": "^2.0.3",
+		"@aureooms/js-heapsort": "^9.0.0",
+		"@aureooms/js-itertools": "^3.0.0",
 		"aureooms-node-package": "^5.0.2"
 	},
 	"scripts": {
