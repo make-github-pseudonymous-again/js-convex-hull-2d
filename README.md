@@ -12,7 +12,7 @@ Convex hull algorithms in two dimensions. Parent is
 //                 * - > - * - > - *
 ```
 
-[![NPM license](https://img.shields.io/npm/l/@aureooms/js-convex-hull-2d.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-convex-hull-2d/master/LICENSE)
+[![License](https://img.shields.io/github/license/aureooms/js-convex-hull-2d.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-convex-hull-2d/master/LICENSE)
 [![NPM version](https://img.shields.io/npm/v/@aureooms/js-convex-hull-2d.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-convex-hull-2d)
 [![Bower version](https://img.shields.io/bower/v/@aureooms/js-convex-hull-2d.svg?style=flat)](http://bower.io/search/?q=@aureooms/js-convex-hull-2d)
 [![Build Status](https://img.shields.io/travis/aureooms/js-convex-hull-2d.svg?style=flat)](https://travis-ci.org/aureooms/js-convex-hull-2d)
