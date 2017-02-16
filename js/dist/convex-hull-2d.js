@@ -1038,12 +1038,12 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 	if (typeof exports === "object") {
 		definition(exports);
 	} else if (typeof define === "function" && define.amd) {
-		define("aureooms-js-convex-hull-2d", [], function () {
+		define("@aureooms/js-convex-hull-2d", [], function () {
 			return definition({});
 		});
 	} else if (typeof window === "object" && typeof window.document === "object") {
 		definition(window["convexhull2d"] = {});
-	} else console.error("unable to detect type of module to define for aureooms-js-convex-hull-2d");
+	} else console.error("unable to detect type of module to define for @aureooms/js-convex-hull-2d");
 })();
 
 // Triangle ( u , v , w ) partioning

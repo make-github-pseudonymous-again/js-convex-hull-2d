@@ -1,9 +1,9 @@
 
 var ch = convexhull2d ;
-var cg = require( 'aureooms-js-cg' ) ;
-var compare = require( "aureooms-js-compare" ) ;
-var functools = require( "aureooms-js-functools" ) ;
-var itertools = require( "aureooms-js-itertools" ) ;
+var cg = require( '@aureooms/js-cg' ) ;
+var compare = require( "@aureooms/js-compare" ) ;
+var functools = require( "@aureooms/js-functools" ) ;
+var itertools = require( "@aureooms/js-itertools" ) ;
 
 var lex = cg.bottomleft( compare.increasing ) ;
 var colex = cg.rightbottom( compare.increasing ) ;
