@@ -2,7 +2,7 @@
 ==
 
 Convex hull algorithms in two dimensions. Parent is
-[aureooms/js-cg](https://github.com/aureooms/js-cg).
+[aureooms/js-cg](https://github.com/make-github-pseudonymous-again/js-cg).
 
 ```js
 //                 * - < - * - < - *
@@ -12,17 +12,17 @@ Convex hull algorithms in two dimensions. Parent is
 //                 * - > - * - > - *
 ```
 
-[![License](https://img.shields.io/github/license/aureooms/js-convex-hull-2d.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-convex-hull-2d/master/LICENSE)
+[![License](https://img.shields.io/github/license/make-github-pseudonymous-again/js-convex-hull-2d.svg?style=flat)](https://raw.githubusercontent.com/make-github-pseudonymous-again/js-convex-hull-2d/master/LICENSE)
 [![NPM version](https://img.shields.io/npm/v/@aureooms/js-convex-hull-2d.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-convex-hull-2d)
 [![Bower version](https://img.shields.io/bower/v/@aureooms/js-convex-hull-2d.svg?style=flat)](http://bower.io/search/?q=@aureooms/js-convex-hull-2d)
-[![Build Status](https://img.shields.io/travis/aureooms/js-convex-hull-2d.svg?style=flat)](https://travis-ci.org/aureooms/js-convex-hull-2d)
-[![Coverage Status](https://img.shields.io/coveralls/aureooms/js-convex-hull-2d.svg?style=flat)](https://coveralls.io/r/aureooms/js-convex-hull-2d)
-[![Dependencies Status](https://img.shields.io/david/aureooms/js-convex-hull-2d.svg?style=flat)](https://david-dm.org/aureooms/js-convex-hull-2d#info=dependencies)
-[![devDependencies Status](https://img.shields.io/david/dev/aureooms/js-convex-hull-2d.svg?style=flat)](https://david-dm.org/aureooms/js-convex-hull-2d#info=devDependencies)
-[![Code Climate](https://img.shields.io/codeclimate/github/aureooms/js-convex-hull-2d.svg?style=flat)](https://codeclimate.com/github/aureooms/js-convex-hull-2d)
+[![Build Status](https://img.shields.io/travis/make-github-pseudonymous-again/js-convex-hull-2d.svg?style=flat)](https://travis-ci.org/make-github-pseudonymous-again/js-convex-hull-2d)
+[![Coverage Status](https://img.shields.io/coveralls/make-github-pseudonymous-again/js-convex-hull-2d.svg?style=flat)](https://coveralls.io/r/make-github-pseudonymous-again/js-convex-hull-2d)
+[![Dependencies Status](https://img.shields.io/david/make-github-pseudonymous-again/js-convex-hull-2d.svg?style=flat)](https://david-dm.org/make-github-pseudonymous-again/js-convex-hull-2d#info=dependencies)
+[![devDependencies Status](https://img.shields.io/david/dev/make-github-pseudonymous-again/js-convex-hull-2d.svg?style=flat)](https://david-dm.org/make-github-pseudonymous-again/js-convex-hull-2d#info=devDependencies)
+[![Code Climate](https://img.shields.io/codeclimate/github/make-github-pseudonymous-again/js-convex-hull-2d.svg?style=flat)](https://codeclimate.com/github/make-github-pseudonymous-again/js-convex-hull-2d)
 [![NPM downloads per month](https://img.shields.io/npm/dm/@aureooms/js-convex-hull-2d.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-convex-hull-2d)
-[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-convex-hull-2d.svg?style=flat)](https://github.com/aureooms/js-convex-hull-2d/issues)
-[![Inline docs](http://inch-ci.org/github/aureooms/js-convex-hull-2d.svg?branch=master&style=shields)](http://inch-ci.org/github/aureooms/js-convex-hull-2d)
+[![GitHub issues](https://img.shields.io/github/issues/make-github-pseudonymous-again/js-convex-hull-2d.svg?style=flat)](https://github.com/make-github-pseudonymous-again/js-convex-hull-2d/issues)
+[![Inline docs](http://inch-ci.org/github/make-github-pseudonymous-again/js-convex-hull-2d.svg?branch=master&style=shields)](http://inch-ci.org/github/make-github-pseudonymous-again/js-convex-hull-2d)
 
 Can be managed through [jspm](https://github.com/jspm/jspm-cli),
 [duo](https://github.com/duojs/duo),
