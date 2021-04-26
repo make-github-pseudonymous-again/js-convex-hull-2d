@@ -1,4 +1,4 @@
-[js-convex-hull-2d](http://aureooms.github.io/js-convex-hull-2d)
+[js-convex-hull-2d](http://make-github-pseudonymous-again.github.io/js-convex-hull-2d)
 ==
 
 Convex hull algorithms in two dimensions. Parent is
